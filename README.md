@@ -1,6 +1,6 @@
 # Grupa7-BezimeniImperatori
 ## Tema projekta 
-Program za stomatološku ordinaciju - 
+Program za stomatološku ordinaciju  
 
 ## Kratki uvod 
 Prilikom razgovora jednog našeg člana tima sa užim članom porodice koji je u skorije vrijeme otvorio stomatološku ordinaciju, dobili smo informaciju da je za sam rad iste potreban valjan softver. Softver, odnosno program, koji bi ispunjavao korisničke zahtjeve u velikoj mjeri, uz vizuelno zadovoljavajući izgled. Uzimajući  u obzir da postojeći programi do kojih se moglo doći, ne ispunjavaju sve tražene zahtjeve. Mi smo, uz veliki optimizam, ovaj problem uzeli kao predmet našeg projekta.
