@@ -52,4 +52,4 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 
   - Kreiranje sistema za online interakciju sa pacijentima
 
-  - Kreiranje različitih notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju praznih
+  - Kreiranje različitih notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju nezakazanih termina
