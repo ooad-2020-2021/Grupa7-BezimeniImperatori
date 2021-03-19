@@ -11,7 +11,7 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 - Pacijenti
 - Dobavljači (poslovni partneri)
 
-## Prikaz funkcionalnih i nefunkcionalnih zahtjeva:
+## Prikaz funkcionalnih i nefunkcionalnih zahtjeva
   - Registracija korisnika (stomatolozi i medicinske sestre)
 
   - Kreiranje protokola pacijenta 
