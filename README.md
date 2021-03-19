@@ -19,7 +19,7 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 - Dobavljači (poslovni partneri)
 
 ## Prikaz funkcionalnih i nefunkcionalnih zahtjeva
-  - Registracija korisnika (stomatolozi i medicinske sestre)
+  - Registrovanje korisnika (stomatolozi i medicinske sestre)
 
   - Kreiranje protokola pacijenta 
     - Bilježenje svakog pojedinačnog termina
@@ -27,27 +27,31 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   
   - Kreiranje stomatološkog kartona pacijenta 
     - Registrovanje kartona pacijenata
-    - Dodavanje protokola u karton pacijenata
+    - Dodavanje protokola u karton pacijenata (ažuriranje postojećeg kartona)
    
   - Kreiranje, unos i upotreba interaktivne slike zuba
-
-  - Preuzimanje i unošenje rentgen slike u karton pacijenta
+  
+  - Preuzimanje i skladištenje RTG snimaka u kartonu odnosno protokolu (ortopana, retroalveolarnih i ostalih 2D snimaka) u odgovarajućem formatu
   
   - Štampanje 
     - Štampanje protokola i/ili kartona za jednog ili više pacijenata
-    - Štampanje stanja nakon dana, sedmice, mjeseca, godine (finansijske evidencije kao i učinka ordinacije i pojedinačnih stomatologa/asistenata)
+    - Štampanje stanja nakon dana, sedmice, mjeseca, godine (finansijske evidencije kao i učinka ordinacije i pojedinačnih stomatologa/tehničara)
   
   - Kreiranje plannera/rasporeda
-    - Zakazivanje termina po danima/sedmicama
-    - Pregled termina kao i dobijanje notifikacija za iste, koje uključuju mogućnost pregleda prethodno urađene usloge kao i šta je potrebno uraditi u tekućem terminu
-    - Pregled rasporeda slobodnih termina 
+    - Zakazivanje termina
+      - Pregledanje trenutno dostupnih termina
+      - Pregledanje cjenovnika
+    - Pregledanje termina kao i dobijanje notifikacija za iste, koje uključuju mogućnost pregleda prethodno urađene usluge kao i šta je potrebno uraditi u tekućem terminu
+    - Pregledanje rasporeda slobodnih termina 
 
   - Vođenje evidencije o finansijama
     - Kreiranje cjenovnika usluga kao i mogućnost naknadne promjene cijena
     - Vođenje evidencije o ratama kao i zaduženjima pacijenata
     - Vođenje evidencije o zaduženjima prema i od poslovnih partnera 
-    - Izračunavanje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...)
+    - Autoformiranje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...)
     - Čuvanje historije svih računa u bazi podataka
+    - Plaćanje i izračunavanje gotovinom uz koji se obračunava popust 
+    - Povezivanje fiskalne kase sa programom 
 
   - Implementiranje sistema za članarinu
     - Dodavanje članske kartice za specifičnog pacijenta
@@ -59,4 +63,5 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 
   - Kreiranje sistema za online interakciju sa pacijentima
 
-  - Kreiranje različitih notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju nezakazanih termina
+  - Kreiranje različitih pop-up notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju slobodnih termina
+   
