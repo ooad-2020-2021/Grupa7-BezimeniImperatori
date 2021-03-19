@@ -45,3 +45,11 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   - Implementiranje sistema za članarinu
     - Dodavanje članske kartice za specifičnog pacijenta
     - Obračunavanje cijene usluga uz specifičan varijabilan popust
+
+  - Prikazivanje video demonstracija upotrebe programa za one koji se nisu susretali sa istim
+
+  - Čuvanje i uploadovanje svih podataka na Cloud, kao i mogućnost exportovanja istih te pravljenje backup fajla sa svim podacima
+
+  - Kreiranje sistema za online interakciju sa pacijentima
+
+  - Kreiranje različitih notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju praznih
