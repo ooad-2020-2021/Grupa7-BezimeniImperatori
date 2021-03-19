@@ -21,4 +21,27 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   - Kreiranje stomatološkog kartona pacijenta 
     - Registrovanje kartona pacijenata
     - Dodavanje protokola u karton pacijenata
-    
+   
+  - Kreiranje, unos i upotreba interaktivne slike zuba
+
+  - Preuzimanje i unošenje rentgen slike u karton pacijenta
+  
+  - Štampanje 
+    - Štampanje protokola i/ili kartona za jednog ili više pacijenata
+    - Štampanje stanja nakon dana, sedmice, mjeseca, godine (finansijske evidencije kao i učinka ordinacije i pojedinačnih stomatologa/asistenata)
+  
+  - Kreiranje plannera/rasporeda
+    - Zakazivanje termina po danima/sedmicama
+    - Pregled termina kao i dobijanje notifikacija za iste, koje uključuju mogućnost pregleda prethodno urađene usloge kao i šta je potrebno uraditi u tekućem terminu
+    - Pregled rasporeda slobodnih termina 
+
+  - Vođenje evidencije o finansijama
+    - Kreiranje cjenovnika usluga kao i mogućnost naknadne promjene cijena
+    - Vođenje evidencije o ratama kao i zaduženjima pacijenata
+    - Vođenje evidencije o zaduženjima prema i od poslovnih partnera 
+    - Izračunavanje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...)
+    - Čuvanje historije svih računa u bazi podataka
+
+  - Implementiranje sistema za članarinu
+    - Dodavanje članske kartice za specifičnog pacijenta
+    - Obračunavanje cijene usluga uz specifičan varijabilan popust
