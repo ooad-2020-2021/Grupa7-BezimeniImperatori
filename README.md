@@ -36,9 +36,12 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   - Preuzimanje i skladištenje RTG snimaka u kartonu odnosno protokolu (ortopana, retroalveolarnih i ostalih 2D snimaka) u odgovarajućem formatu
   
   - Kreiranje plannera/rasporeda
-  - Zakazivanje termina
+
+  - Pregledanje rasporeda slobodnih termina  
+    - Zakazivanje termina
+   
   - Pregledanje termina kao i dobijanje notifikacija za iste, koje uključuju mogućnost pregleda prethodno urađene usluge kao i šta je potrebno uraditi u tekućem termin
-  - Pregledanje rasporeda slobodnih termina 
+  
     
   - Pregledanje cjenovnika
 
