@@ -1,7 +1,7 @@
 # Grupa7-BezimeniImperatori
 
 <p align="center">
-  <img width="460" height="300" src="https://imgur.com/s7zfLhu">
+  <img width="460" height="300" src="https://ibb.co/pxFyDXQ">
 </p>
 
 ## Tema projekta 
