@@ -1,8 +1,7 @@
 # Grupa7-BezimeniImperatori
 
-<p align="center">
-  <img width="460" height="300" src="https://ibb.co/pxFyDXQ">
-</p>
+![rsz_163197576_440102223759119_3829249456402551317_n](https://user-images.githubusercontent.com/72881957/111922846-95f00b00-8a9c-11eb-91a0-1172b000775e.png)
+
 
 ## Tema projekta 
 Program za stomatološku ordinaciju - JAWS
