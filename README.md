@@ -57,3 +57,4 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 
   - Kreiranje različitih pop-up notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju slobodnih termina
    
+  - Implementiranje adresara sa kontakt podacima (poslovni partneri)
