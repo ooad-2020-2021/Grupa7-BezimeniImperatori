@@ -30,7 +30,6 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
     - Dodavanje Rentgen vilice
   
   - Kreiranje stomatološkog kartona pacijenta 
-    - Registrovanje kartona pacijenata
     - Dodavanje protokola u karton pacijenata (ažuriranje postojećeg kartona)
 
   
