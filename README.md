@@ -37,10 +37,10 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   
   - Kreiranje plannera/rasporeda
     - Zakazivanje termina
-      - Pregledanje trenutno dostupnih termina
-      - Pregledanje cjenovnika
     - Pregledanje termina kao i dobijanje notifikacija za iste, koje uključuju mogućnost pregleda prethodno urađene usluge kao i šta je potrebno uraditi u tekućem terminu
     - Pregledanje rasporeda slobodnih termina 
+    
+  - Pregledanje cjenovnika
 
   - Kreiranje cjenovnika usluga kao i mogućnost naknadne promjene cijena
 
