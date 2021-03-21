@@ -44,7 +44,7 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 
   - Plaćanje usluga
 
-  - Autoformiranje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...) korištenjem algoritma za izračunavanje popusta uzimajući u obzir količinu urađenih usluga kao i vremenski period u kojem su te usluge urađene i posjedovanje članske kartice
+  - Autoformiranje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...) korištenjem algoritma za izračunavanje popusta uzimajući u obzir količinu urađenih usluga, vremenski period u kojem su te usluge urađene kao i posjedovanje članske kartice
 
   - Implementiranje sistema za članarinu
     - Dodavanje članske kartice za specifičnog pacijenta
