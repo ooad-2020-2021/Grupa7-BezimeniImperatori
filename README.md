@@ -44,7 +44,6 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
    
   - Pregledanje termina kao i dobijanje notifikacija za iste, koje uključuju mogućnost pregleda prethodno urađene usluge kao i šta je potrebno uraditi u tekućem termin
   
-    
   - Pregledanje cjenovnika
 
   - Kreiranje cjenovnika usluga kao i mogućnost naknadne promjene cijena
@@ -53,7 +52,7 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 
   - Autoformiranje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...) korištenjem algoritma za izračunavanje popusta uzimajući u obzir količinu urađenih usluga, vremenski period u kojem su te usluge urađene kao i posjedovanje članske kartice
 
-  - Implementiranje sistema za članarinu
+  - Korištenje članarine za najvjernije pacijente (loyalty card)
     - Dodavanje članske kartice za specifičnog pacijenta
 
   - Prikazivanje video demonstracija upotrebe programa za one koji se nisu susretali sa istim
@@ -64,4 +63,4 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
    
   - Implementiranje adresara sa kontakt podacima (poslovni partneri)
 
-  - API
+  - API za prebacivanje podataka u drugi program
