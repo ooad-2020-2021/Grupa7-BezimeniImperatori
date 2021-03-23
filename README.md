@@ -59,7 +59,7 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   
   - Slanje poruka stomatologu/stomatološkom tehničaru 
 
-  - Omogućavanje sortiranja pacijenata po imenu/prezimenu i traženje nekog od pacijenata preko nekog od   
+  - Omogućavanje sortiranja/traženja pacijenata po imenu/prezimenu, po datumu, ...   
 
   - Kreiranje različitih pop-up notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju slobodnih termina
    
