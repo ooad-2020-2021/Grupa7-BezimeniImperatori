@@ -33,6 +33,7 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
   - Kreiranje stomatološkog kartona pacijenta 
     - Dodavanje protokola u karton pacijenata (ažuriranje postojećeg kartona)
 
+  - Simulacija stanja vilice preko LED lampica uz tri moguća stanja zuba
   
   - Preuzimanje i skladištenje RTG snimaka u kartonu odnosno protokolu (ortopana, retroalveolarnih i ostalih 2D snimaka) u odgovarajućem formatu
   
