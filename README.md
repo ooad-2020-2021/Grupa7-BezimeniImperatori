@@ -6,7 +6,7 @@ Bezimene Imperatore čine:
   
 Awad (awadić) Abdullah  
 Hasanić (keno-noke-karaoke) Kenan   
-Hodžić (hodža) Adnan  
+Hodžić (dr. hodža) Adnan  
 Isić (hale) Hamza  
 
 
