@@ -15,8 +15,7 @@ Najdosadniji dio posla koji dijele skoro svi radnici u različitim djelatnostima
 
 Moguće je registrovati i ažurirati stomatološki karton pacijenta uz korištenje veoma user-friendly GUI-a. Sve RTG slike zuba koje su ključne za praćenje stanja pacijenta se mogu pohraniti u karton pacijenta, omogućavajući lak pregled čitave historije pacijenta kroz samo jedan klik. Ukoliko je potrebno, moći će se pregledati i specifično stanje svakog zuba, kao i cijelih usta kroz RTG sliku obje vilice. Također, JAWS olakšava posao stomatologa kroz jednostavni planner i prikazivanje svih zakazanih termina za tekući dan, kao i informacije o zahvatima koje će biti potrebno obaviti, omogućavajući asistentima da na vrijeme pripreme sve esencijalne alate i time povećaju efikasnost i produktivnost same stomatološke ordinacije. JAWS također ima implementiran sistem notificiranja, koji neće prekidati korisnika u onome što trenutno radi. Neće biti potrebno ručno računati cijene usluga - JAWS će na osnovu cjenovnika formirati cijene za cjelokupnu ordinaciju kao i za pojedinačnog pacijenta. JAWS također nudi mogućnost simulacije stanja vilice preko LED dioda da bi se dobio ilustrativniji prikaz stanja obje vilice. Ukoliko je pacijentu potreban veći broj usluga, moći će da kroz loyalty karticu dobije određeni popust. Ovo je naročito preporučljivo pacijentima koji nose aparatiće te su im potrebne stalne kontrole i prepravke, što će uz jeftinije cijene povećati zadovoljstvo pacijenata. Za sva pitanja i nedoumice, pacijenti mogu kontaktirati stomatologa ili tehničare preko stranice kojoj će imati pristup uz registraciju.
 
-Većina stomatologa ima jako velik broj pacijenata koje bi bilo veoma teško pretražiti, naći ili sortirati pacijente za pregled analitike stomatološke ordinacije što uz JAWS neće biti problem. Najveća mana kod digitalne evidencije jeste nemogućnost prenosa podataka sa jednog programa u drugi, time znatno limitirajući svoju upotrebljivost.
-To neće biti problem sa našim programom koji će imati API te ćemo moći bez problema povezivati sa drugim programima.
+Većina stomatologa ima jako velik broj pacijenata koje bi bilo veoma teško pretražiti, naći ili sortirati pacijente za pregled analitike stomatološke ordinacije što uz JAWS neće biti problem. Najveća mana kod digitalne evidencije jeste nemogućnost prenosa podataka sa jednog programa u drugi, time znatno limitirajući svoju upotrebljivost. JAWS nudi API s kojim ćemo moći bez problema povezivati sa drugim programima.
 
 ## Akteri sistema 
 - Doktori (stomatolozi i asistent stomatologa)
@@ -26,13 +25,15 @@ To neće biti problem sa našim programom koji će imati API te ćemo moći bez 
 ## Prikaz funkcionalnih i nefunkcionalnih zahtjeva
   - Registrovanje korisnika (stomatolozi i medicinske sestre)
 
-  - Kreiranje protokola pacijenta 
+  - Kreiranje stomatološke usluge pacijenta 
     - Bilježenje svakog pojedinačnog termina
     - Dodavanje Rentgen vilice
   
   - Kreiranje stomatološkog kartona pacijenta 
-    - Dodavanje protokola u karton pacijenata (ažuriranje postojećeg kartona)
+    - Dodavanje stomatološke usluge u karton pacijenata (ažuriranje postojećeg kartona)
     - Preuzimanje i skladištenje RTG snimaka u kartonu odnosno protokolu (ortopana, retroalveolarnih i ostalih 2D snimaka) u odgovarajućem formatu
+
+  - Kreiranje i autopopunjavanje knjige protokola
 
   - Simulacija stanja vilice preko LED lampica uz tri moguća stanja zuba
   
