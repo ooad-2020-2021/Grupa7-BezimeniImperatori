@@ -2,15 +2,18 @@
 
 ![rsz_163197576_440102223759119_3829249456402551317_n](https://user-images.githubusercontent.com/72881957/111922846-95f00b00-8a9c-11eb-91a0-1172b000775e.png)
 
-Bezimene Imperatore čine: 
-Awad (awadić) Abdullah 
-Hasanić (keno-noke-karaoke) Kenan 
-Hodžić (hodža) Adnan
-Isić (hale) Hamza
+Bezimene Imperatore čine:  
+  
+Awad (awadić) Abdullah  
+Hasanić (keno-noke-karaoke) Kenan   
+Hodžić (hodža) Adnan  
+Isić (hale) Hamza  
 
 
 ## Tema projekta 
 Web aplikacija za stomatološku ordinaciju - JAWS
+
+
 
 ## Kratki uvod 
 Prilikom razgovora jednog našeg člana tima sa užim članom porodice koji je u skorije vrijeme otvorio stomatološku ordinaciju, dobili smo informaciju da je za sam rad iste potreban valjan softver. Softver, odnosno program, koji bi ispunjavao korisničke zahtjeve u velikoj mjeri, uz vizuelno zadovoljavajući izgled. Uzimajući  u obzir da postojeći programi do kojih se moglo doći, ne ispunjavaju sve tražene zahtjeve. Mi smo, uz veliki optimizam, ovaj problem uzeli kao predmet našeg projekta.
