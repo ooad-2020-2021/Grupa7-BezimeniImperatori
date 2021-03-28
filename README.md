@@ -44,7 +44,7 @@ _Za više informacija možete pročitati specifikaciju projekta (PDF dokument)._
 
   - Simulacija stanja vilice preko LED lampica uz tri moguća stanja zuba
   
-  - Kreiranje plannera/rasporeda
+  - Kreiranje rasporeda termina
 
   - Pregledanje rasporeda slobodnih termina  
     - Zakazivanje termina
