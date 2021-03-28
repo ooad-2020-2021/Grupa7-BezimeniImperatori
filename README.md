@@ -33,14 +33,14 @@ _Za više informacija možete pročitati specifikaciju projekta (PDF dokument)._
   - Registrovanje korisnika (stomatolozi i medicinske sestre)
 
   - Kreiranje stomatološke usluge pacijenta 
-    - Unos podataka pacijenta
+    - Unos podataka pacijenta i opis urađenog zahvata
     - Dodavanje Rentgen vilice
   
   - Kreiranje stomatološkog kartona pacijenta 
     - Dodavanje stomatološke usluge u karton pacijenata (ažuriranje postojećeg kartona)
     - Preuzimanje i skladištenje RTG snimaka u kartonu odnosno protokolu (ortopana, retroalveolarnih i ostalih 2D snimaka) u odgovarajućem formatu
 
-  - Kreiranje i autopopunjavanje knjige protokola
+  - Kreiranje i popunjavanje knjige protokola
 
   - Simulacija stanja vilice preko LED lampica uz tri moguća stanja zuba
   
@@ -59,9 +59,8 @@ _Za više informacija možete pročitati specifikaciju projekta (PDF dokument)._
 
   - Autoformiranje cijena prema uslugama (npr. prema broju liječenih zuba, broju anestezija, ...) korištenjem algoritma za izračunavanje popusta uzimajući u obzir količinu urađenih usluga, vremenski period u kojem su te usluge urađene kao i posjedovanje članske kartice
 
-  - Korištenje članarine za najvjernije pacijente (loyalty card)
-    - Dodavanje članske kartice za specifičnog pacijenta
-
+  - Kreiranje i provjeravanje potrošačkih kartica za najvjernije pacijente (loyalty card)
+  
   - Prikazivanje video demonstracija upotrebe programa za one koji se nisu susretali sa istim
   
   - Slanje poruka stomatologu/stomatološkom tehničaru 
