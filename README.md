@@ -33,7 +33,7 @@ _Za više informacija možete pročitati specifikaciju projekta (PDF dokument)._
   - Registrovanje korisnika (stomatolozi i medicinske sestre)
 
   - Kreiranje stomatološke usluge pacijenta 
-    - Bilježenje svakog pojedinačnog termina
+    - Unos podataka pacijenta
     - Dodavanje Rentgen vilice
   
   - Kreiranje stomatološkog kartona pacijenta 
