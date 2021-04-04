@@ -13,8 +13,6 @@ Isić (hale) Hamza
 ## Tema projekta 
 Web aplikacija za stomatološku ordinaciju - JAWS
 
-
-
 ## Kratki uvod 
 Prilikom razgovora jednog našeg člana tima sa užim članom porodice koji je u skorije vrijeme otvorio stomatološku ordinaciju, dobili smo informaciju da je za sam rad iste potreban valjan softver. Softver, odnosno program, koji bi ispunjavao korisničke zahtjeve u velikoj mjeri, uz vizuelno zadovoljavajući izgled. Uzimajući  u obzir da postojeći programi do kojih se moglo doći, ne ispunjavaju sve tražene zahtjeve. Mi smo, uz veliki optimizam, ovaj problem uzeli kao predmet našeg projekta.
 Daljne informacije o samom programu, odnosno web aplikaciji, su nastale uz intervju obavljen sa pomenutim stomatologom, te istraživanjem svih članova tima.
@@ -70,5 +68,3 @@ _Za više informacija možete pročitati specifikaciju projekta (PDF dokument)._
   - Kreiranje različitih pop-up notifikacija u skladu sa vremenima zakaznih termina kao i pauza u slučaju slobodnih termina
    
   - Implementiranje adresara sa kontakt podacima (poslovni partneri)
-
-  - API za prebacivanje podataka u drugi program
