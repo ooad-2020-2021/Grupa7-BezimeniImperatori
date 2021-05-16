@@ -13,6 +13,9 @@ namespace JAWS.Models
 
         [Key]
         [Required]
+        public int id { get; set; }
+
+        [Required]
         public string nazivFirme { get; set; }
 
         [Required]
@@ -22,12 +25,17 @@ namespace JAWS.Models
         public string adresa { get; set; }
 
         #endregion
-        
+
+        #region Konstruktori
         public Kontakt(string nazivFirme, string brojTelefona, string adresa)
         {
             this.nazivFirme = nazivFirme;
             this.brojTelefona = brojTelefona;
             this.adresa = adresa;
         }
+
+        #endregion
+
+
     }
 }

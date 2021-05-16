@@ -11,9 +11,11 @@ namespace JAWS.Models
         #region Properties
 
         #endregion
+
         #region Konstruktor i destruktor
         public Doktor(int iD, string imePrezime, string email, string sifra) : base(iD, imePrezime, email, sifra) { }
         #endregion
+
         #region Metode
         void Pregledaj(interface Pregledanje)
         {

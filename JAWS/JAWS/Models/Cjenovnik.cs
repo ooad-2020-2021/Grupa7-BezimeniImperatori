@@ -11,14 +11,17 @@ namespace JAWS.Models
         
         #region Properties
 
-        [Required]
         public List<Tuple<string, double>> uslugeICijene { get; set; }
 
         #endregion
-        
+
+        #region Konstruktori
+
         public Cjenovnik()
         {
         }
+
+        #endregion
 
         #region Metode
 

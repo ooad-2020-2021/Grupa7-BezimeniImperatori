@@ -21,6 +21,7 @@ namespace JAWS.Models
         /* [NotMapped]
          public List<Student> UpisaniStudenti { get; set; } */
         #endregion
+
         #region Konstruktor
         //public Student() { }
         public Korisnik(int iD, string imePrezime, string email, string sifra)

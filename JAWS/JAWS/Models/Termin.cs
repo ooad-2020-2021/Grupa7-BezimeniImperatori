@@ -11,16 +11,16 @@ namespace JAWS.Models
        
         #region Properties
 
-        //[Required]
+        [Required]
         public Pacijent? pacijent { get; set; }
 
-        //[Required]
+        [Required]
         public DateTime vrijemeTermina { get; set; }
 
         [Required]
         public bool zauzetostTermina { get; set; } = false;
 
-        [Required]
+        //[Required]
         public string obrazlozenjeTermina { get; set; } = "";
 
 
