@@ -40,6 +40,11 @@ namespace JAWS.Models
             //uslugeICijene = new Tuple<string, double>(nazivUsluge, cijenaUsluge);
         }
 
+        public void promijeniNazivUsluge(string nazivUsluge, string noviNazivUsluge)
+        {
+            
+        }
+
         #endregion
     }
 }
