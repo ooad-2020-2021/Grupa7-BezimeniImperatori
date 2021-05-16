@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,13 +9,11 @@ namespace JAWS.Models
 {
     public class Termini
     {
-       
-        #region Properties
 
-        [Key]
-        [Required]
-        private static Termini instance { get; set; }
+        #region Instance
 
+        [NotMapped]
+        private static Termini Instance;
         #endregion
 
         #region Konstruktor
@@ -24,32 +23,39 @@ namespace JAWS.Models
         }
 
         #endregion
+        #region Properties
 
-        #region Metode
+        [NotMapped]
+        public static List<Termin> TerminiList { get; set; } = new List<Termin>();
+    #endregion
 
-        public static Termini GetInstance()
+    #region Metode
+
+        public static Termini DajTermine()
         {
-            if (instance == null)
+            if (Instance == null)
             {
-                instance= new Termini();
-                instance = new List<Termin>();
+                Instance = new Termini();
             }
-            return instance;
+            return Instance;
         }
 
         public void dodajTermin(Termin termin)
         {
-            termini.Add(termin);
+            TerminiList.Add(termin);
         }
 
         public void izbaciTermin(Termin termin)
         {
-            termini.Remove(termin);
+            TerminiList.Remove(termin);
         }
 
-        public Termin vratiTermin(DateTime datumVrijeme)
+        public Termin VratiTermin(DateTime datumVrijeme)
         {
-           var t = termini.Find()
+            foreach(var t in TerminiList){ //doraditi
+                if (DateTime.Compare(t.vrijemeTermina, datumVrijeme)==0) return t;
+            }
+            return null;    
         }
 
         #endregion

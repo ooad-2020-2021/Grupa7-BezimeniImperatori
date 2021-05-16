@@ -8,6 +8,7 @@ namespace JAWS.Models
 {
     public class StomatoloskaUsluga
     {
+<<<<<<< HEAD
        
         #region Properties
 
@@ -48,5 +49,9 @@ namespace JAWS.Models
 
         
         #endregion
+=======
+
+>>>>>>> a956c35568d16c241fee7107d246490c1ad67185
     }
+}
 }
