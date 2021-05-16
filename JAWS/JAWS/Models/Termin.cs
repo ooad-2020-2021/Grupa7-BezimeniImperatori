@@ -25,7 +25,10 @@ namespace JAWS.Models
 
 
         #endregion
-        
+
+
+
+        #region Konstruktor
         public Termin(Pacijent pacijent, DateTime vrijemeTermina, string obrazlozenjeTermina)
         {
             this.pacijent = pacijent;
@@ -33,5 +36,6 @@ namespace JAWS.Models
             this.zauzetostTermina = true;
             this.obrazlozenjeTermina = obrazlozenjeTermina;
         }
+        #endregion
     }
 }

@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace JAWS.Models
 {
-    public class StomatoloskaUsluga
+    public class Planner
     {
-
+        //Kako realizovati logiku termina?
     }
-}
 }
