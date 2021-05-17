@@ -8,12 +8,8 @@ namespace JAWS.Models
 {
     public class StomatoloskaUsluga
     {
-<<<<<<< HEAD
        
         #region Properties
-
-        [Required]
-        public Pacijent pacijent { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -25,6 +21,8 @@ namespace JAWS.Models
         public string rtgSnimak { get; set; } = "";
 
         public string napomene { get; set; }
+
+        public string opisUsluge { get; set; }
 
         [Required]
         public string izvjestajTerapije { get; set; }
@@ -47,11 +45,13 @@ namespace JAWS.Models
 
         #region Metode
 
+        public string dajOpisUsluge()
+        {
+            return opisUsluge;
+        }
         
         #endregion
-=======
 
->>>>>>> a956c35568d16c241fee7107d246490c1ad67185
     }
 }
-}
+

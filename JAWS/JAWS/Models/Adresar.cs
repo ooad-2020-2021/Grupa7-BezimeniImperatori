@@ -14,7 +14,7 @@ namespace JAWS.Models
         [NotMapped]
         public List<Kontakt> kontakti { get; set; }
 
-        #endregion
+        #endregion Konstruktori
         
         public Adresar()
         {
@@ -27,9 +27,9 @@ namespace JAWS.Models
             kontakti.Add(kontakt);
         }
 
-        public void izbrisiKontakt(Kontakt kontakt)
+        public void izbrisiKontakt(int id)
         {
-            kontakti.Remove(kontakt);
+            kontakti.Remove(kontakti[id]);
         }
 
         public string dajPodatkeOKontaktu(Kontakt kontakt)
