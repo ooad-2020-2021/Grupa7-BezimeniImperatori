@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,10 +9,11 @@ namespace JAWS.Models
 {
     public class Cjenovnik
     {
-        
+
         #region Properties
 
-        public List<Tuple<string, double>> uslugeICijene { get; set; }
+        [NotMapped]
+        public List<Tuple<string, double>> uslugeICijene { get; set; } = new List<Tuple<string, double>>();
 
         #endregion
 
@@ -23,7 +25,8 @@ namespace JAWS.Models
 
         #endregion
 
-        #region Metode
+        #region Metode 
+        //treba napisati metodu promjeni cijene
 
         public void dodajUslugu(string nazivUsluge, double cijenaUsluge)
         {
@@ -32,15 +35,17 @@ namespace JAWS.Models
 
         public void promijeniCijenu(string nazivUsluge, double novaCijenaUsluge)
         {
-                foreach(var first in uslugeICijene)
-            {
-                if(first.Item1 == nazivUsluge)
-                {
-                    //first.Item2 = novaCijenaUsluge;
-                }
-                //treba uraditi ovu metodu
-            }
-            //uslugeICijene = new Tuple<string, double>(nazivUsluge, cijenaUsluge);
+            //uslugeICijene[nazivUsluge].Item2 = novaCijenaUsluge;
+            /*       foreach(var first in uslugeICijene)
+               {
+                   if(first.Item1 == nazivUsluge)
+                   {
+                       //first.Item2 = novaCijenaUsluge;
+                   }
+                   //treba uraditi ovu metodu
+               }
+               //uslugeICijene = new Tuple<string, double>(nazivUsluge, cijenaUsluge);
+           */
         }
 
         public void promijeniNazivUsluge(string nazivUsluge, string noviNazivUsluge)
