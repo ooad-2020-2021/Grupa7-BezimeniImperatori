@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace JAWS.Models
@@ -8,16 +9,19 @@ namespace JAWS.Models
         #region Properties
         [Key]
         [Required]
+        [DisplayName("ID loyal kartice: ")]
         public int id { get; set; }
+
+        [DisplayName("Trajanje kartice (mjeseci): ")]
         public static int trajanjeKarticeUMjesecima { get; set; } = 6;
         [Required]
         [DataType(DataType.Date)]
+        [DisplayName("Datum kreiranja: ")]
         public DateTime datumKreiranja { get; set; }
+        [DisplayName("Iznos fiksnog popusta: ")]
         public static double iznosFiksnogPopusta { get; set; } = 0.05;
+        [DisplayName("Iznos popusta na broj usluga: ")]
         public static double iznosPopustaNaBrojUsluga { get; set; } = 0.20;
-        /*public bool aktivna;
-        [DataType(DataType.Date)]
-        public DateTime datumIsteka;*/
 
         #endregion
         #region Konstruktor i destruktor

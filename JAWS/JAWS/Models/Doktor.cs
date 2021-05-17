@@ -17,10 +17,10 @@ namespace JAWS.Models
         #endregion
 
         #region Metode
-        void Pregledaj(interface Pregledanje)
+       /* void Pregledaj(interface Pregledanje)
         {
         Pregledanje();
-        }
+        }*/
         #endregion
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -12,20 +13,25 @@ namespace JAWS.Models
         #region Properties
         [Required]
         [DataType(DataType.Date)]
+        [DisplayName("Datum rođenja: ")]
         public DateTime datumRodjenja { get; set; }
         [Required]
+        [DisplayName("Broj telefona: ")]
         public string brojTelefona { get; set; }
 
         [Required]
+        [DisplayName("Spol: ")] //enum?
         public char spol { get; set; }
 
         [Required]
+        [DisplayName("Prebivalište: ")]
         public string prebivaliste { get; set; }
         [Required]
+        [DisplayName("Prebivalište: ")]
         public string jedinstveniMatičniBroj { get; set; }
-
+        [DisplayName("Zdravstvene napomene: ")]
         public string zdravstveneNapomene { get; set; }
-
+        //ima loyal karticu da/ne
         public LoyalKartica? loyalKartica  { get; set; }
 
         #endregion
@@ -47,10 +53,10 @@ namespace JAWS.Models
         #endregion
         #region Metode
 
-        void Pregledaj(interface Pregledanje)
+        /*void Pregledaj(interface Pregledanje)
         {
          Pregledanje();
-        }
+        }*/
         #endregion
     }
 }
