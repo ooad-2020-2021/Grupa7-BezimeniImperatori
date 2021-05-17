@@ -8,17 +8,20 @@ namespace JAWS.Models
 {
     public class Adresar
     {
-        
+
         #region Properties
 
         [NotMapped]
-        public List<Kontakt> kontakti { get; set; }
+        public List<Kontakt> kontakti { get; set; } = new List<Kontakt> ();
 
-        #endregion Konstruktori
-        
+        #endregion
+
+        #region Konstruktori
+
         public Adresar()
         {
         }
+        #endregion
 
         #region Metode
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,15 +14,19 @@ namespace JAWS.Models
 
         [Key]
         [Required]
+        [DisplayName("ID: ")]
         public int id { get; set; }
 
         [Required]
+        [DisplayName("Naziv firme: ")]
         public string nazivFirme { get; set; }
 
         [Required]
+        [DisplayName("Broj telefona: ")]
         public string brojTelefona { get; set; }
 
         [Required]
+        [DisplayName("Adresa: ")]
         public string adresa { get; set; }
 
         #endregion
