@@ -7,25 +7,38 @@ using System.Threading.Tasks;
 
 namespace JAWS.Models
 {
+    public class DatumIzProšlosti : RangeAttribute //dodati klasu
+    {
+        public DatumIzProšlosti() : base(typeof(DateTime), DateTime.MinValue.ToString(), DateTime.Now.ToString())
+        {
+
+        }
+    }
     public class Termin
     {
-       
-        #region Properties
 
+        #region Properties
         [Required]
         //[DisplayName("")]
-        public Pacijent? pacijent { get; set; }
+        public Pacijent? Pacijent { get; set; }
 
         [Required]
         [DisplayName("Vrijeme željenog termina: ")]
+<<<<<<< HEAD
         [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
         public DateTime vrijemeTermina { get; set; }
+=======
+        [DatumIzProšlosti(ErrorMessage = "Neispravan datum!")]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
+        public DateTime VrijemeTermina { get; set; }
+>>>>>>> c207b7e8eedb2d7dc16e68601d53b26cf7ae54f1
 
         [Required]
-        public bool zauzetostTermina { get; set; } = false;
+        public bool ZauzetostTermina { get; set; } = false;
 
         [DisplayName("Obrazloženje za zakazivanje termina: ")]
-        public string obrazlozenjeTermina { get; set; } = "";
+        [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Obrazloženje zakazivanja termina mora imati barem 10 karaktera!")]
+        public string ObrazlozenjeTermina { get; set; } = "";
 
 
         #endregion
@@ -34,10 +47,10 @@ namespace JAWS.Models
 
         public Termin(Pacijent pacijent, DateTime vrijemeTermina, string obrazlozenjeTermina)
         {
-            this.pacijent = pacijent;
-            this.vrijemeTermina = vrijemeTermina;
-            this.zauzetostTermina = true;
-            this.obrazlozenjeTermina = obrazlozenjeTermina;
+            this.Pacijent = pacijent;
+            this.VrijemeTermina = vrijemeTermina;
+            this.ZauzetostTermina = true;
+            this.ObrazlozenjeTermina = obrazlozenjeTermina;
         }
         #endregion
     }
