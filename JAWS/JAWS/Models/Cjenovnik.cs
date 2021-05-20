@@ -9,11 +9,15 @@ namespace JAWS.Models
 {
     public class Cjenovnik
     {
+        #region Instance
 
+        [NotMapped]
+        private static Cjenovnik Instance;
+        #endregion
         #region Properties
 
         [NotMapped]
-        public List<Tuple<string, double>> uslugeICijene { get; set; } = new List<Tuple<string, double>>();
+        public static List<Tuple<string, double>> UslugeICijene { get; set; } = new List<Tuple<string, double>>();
 
         #endregion
 
@@ -27,32 +31,42 @@ namespace JAWS.Models
 
         #region Metode 
         //treba napisati metodu promjeni cijene
-
-        public void dodajUslugu(string nazivUsluge, double cijenaUsluge)
+        public static Cjenovnik DajCjenovnik()
         {
-            uslugeICijene.Add(new Tuple<string, double>(nazivUsluge, cijenaUsluge));
+            if (Instance == null)
+            {
+                Instance = new Cjenovnik();
+            }
+            return Instance;
         }
 
-        public void promijeniCijenu(string nazivUsluge, double novaCijenaUsluge)
+        public void DodajUslugu(string nazivUsluge, double cijenaUsluge)
         {
-            //uslugeICijene[nazivUsluge].Item2 = novaCijenaUsluge;
-            /*       foreach(var first in uslugeICijene)
+            UslugeICijene.Add(new Tuple<string, double>(nazivUsluge, cijenaUsluge));
+        }
+
+        public void PromijeniCijenu(string nazivUsluge, double novaCijenaUsluge)
+        {           
+                 foreach(var Usluga in UslugeICijene)
                {
-                   if(first.Item1 == nazivUsluge)
+                   if(Usluga.Item1.Equals(nazivUsluge))
                    {
-                       //first.Item2 = novaCijenaUsluge;
+                    UslugeICijene.Remove(Usluga);
+                    UslugeICijene.Add(new Tuple<string, double>(nazivUsluge, novaCijenaUsluge));
                    }
-                   //treba uraditi ovu metodu
-               }
-               //uslugeICijene = new Tuple<string, double>(nazivUsluge, cijenaUsluge);
-           */
+               }   
         }
-
-        public void promijeniNazivUsluge(string nazivUsluge, string noviNazivUsluge)
+        public void PromijeniNazivUsluge(string noviNazivUsluge, double cijenaUsluge)
         {
-            
+            foreach (var Usluga in UslugeICijene)
+            {
+                if (Usluga.Item2==cijenaUsluge)
+                {
+                    UslugeICijene.Remove(Usluga);
+                    UslugeICijene.Add(new Tuple<string, double>(noviNazivUsluge, cijenaUsluge));
+                }
+            }
         }
-
         #endregion
     }
 }

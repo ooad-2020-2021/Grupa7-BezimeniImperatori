@@ -8,12 +8,15 @@ namespace JAWS.Models
 {
     public class Adresar
     {
+        #region Instance
 
+        [NotMapped]
+        private static Adresar instance;
+        #endregion
         #region Properties
 
         [NotMapped]
-        public List<Kontakt> kontakti { get; set; } = new List<Kontakt> ();
-
+        public static List<Kontakt> Kontakti { get; set; } = new List<Kontakt> ();
         #endregion
 
         #region Konstruktori
@@ -24,18 +27,26 @@ namespace JAWS.Models
         #endregion
 
         #region Metode
-
-        public void dodajKontakt(Kontakt kontakt)
+        public static Adresar DajAdresar()
         {
-            kontakti.Add(kontakt);
+            if (instance == null)
+            {
+                instance = new Adresar();
+            }
+            return instance;
         }
 
-        public void izbrisiKontakt(int id)
+        public void DodajKontakt(Kontakt kontakt)
         {
-            kontakti.Remove(kontakti[id]);
+            Kontakti.Add(kontakt);
         }
 
-        public string dajPodatkeOKontaktu(Kontakt kontakt)
+        public void IzbrisiKontakt(int id)
+        {
+            Kontakti.Remove(Kontakti[id]);
+        }
+
+        public string DajPodatkeOKontaktu(Kontakt kontakt)
         {
             return ("Naziv firme: " + kontakt.nazivFirme + "\nBroj telefona: " + kontakt.brojTelefona + "\nAdresa: " + kontakt.adresa);
         }
