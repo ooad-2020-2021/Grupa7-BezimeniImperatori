@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace JAWS.Models
 {
+
     public class LoyalKartica
     {
         #region Properties
@@ -14,12 +15,16 @@ namespace JAWS.Models
 
         [DisplayName("Trajanje kartice (mjeseci): ")]
         public static int trajanjeKarticeUMjesecima { get; set; } = 6;
+
         [Required]
         [DataType(DataType.Date)]
+        [DatumIzProšlosti(ErrorMessage = "Neispravan datum!")]
         [DisplayName("Datum kreiranja: ")]
         public DateTime datumKreiranja { get; set; }
+
         [DisplayName("Iznos fiksnog popusta: ")]
         public static double iznosFiksnogPopusta { get; set; } = 0.05;
+
         [DisplayName("Iznos popusta na broj usluga: ")]
         public static double iznosPopustaNaBrojUsluga { get; set; } = 0.20;
 

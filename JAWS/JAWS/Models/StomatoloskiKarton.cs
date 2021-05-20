@@ -46,7 +46,7 @@ namespace JAWS.Models
             this.brojKartona = brojKartona;
             this.datumOtvaranjaKartona = datumOtvaranjaKartona;
             this.pacijent = pacijent;
-            this.medicinksiPodaci = medicinksiPodaci;
+            this.medicinskiPodaci = medicinksiPodaci;
         }
 
         #endregion

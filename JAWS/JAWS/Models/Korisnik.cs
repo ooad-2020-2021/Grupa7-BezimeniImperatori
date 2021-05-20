@@ -14,15 +14,20 @@ namespace JAWS.Models
         [Required]
         [DisplayName("ID Korisnika: ")]
         public int ID { get; set; }
+
         [Required]
         [DisplayName("Ime i Prezime: ")]
         public string imePrezime { get; set; }
+
         [Required]
         [DisplayName("E-mail: ")]
         public string email { get; set; }
+
         [Required]
-        [DisplayName("Šifra: ")] //enum?
+        [StringLength(int.MaxValue, MinimumLength = 6, ErrorMessage = "Nedovoljan broj karaktera!")]
+        [DisplayName("Šifra (minimum 6 karaktera): ")]
         public string sifra { get; set; }
+
         /* [NotMapped]
          public List<Student> UpisaniStudenti { get; set; } */
         #endregion

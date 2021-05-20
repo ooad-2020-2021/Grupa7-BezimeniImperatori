@@ -30,6 +30,7 @@ namespace JAWS.Models
         public string opisUsluge { get; set; }
 
         [Required]
+        [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Izvještaj terapije mora imati barem 10 karaktera!")]
         [DisplayName("Izvještaj terapije: ")]
         public string izvjestajTerapije { get; set; }
 

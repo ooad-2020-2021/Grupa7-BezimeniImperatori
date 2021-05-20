@@ -18,6 +18,7 @@ namespace JAWS.Models
 
         [Required]
         [DisplayName("Vrijeme željenog termina: ")]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
         public DateTime vrijemeTermina { get; set; }
 
         [Required]
