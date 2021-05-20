@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\JAWS.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\JAWS.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\obj\\",
+=======
+    "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj",
+        "projectName": "JAWS",
+        "projectPath": "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj",
+        "packagesPath": "C:\\Users\\XY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\obj\\",
+>>>>>>> 60057f5f1ef5714553a5a228d63ccd5b39dfe7c5
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
