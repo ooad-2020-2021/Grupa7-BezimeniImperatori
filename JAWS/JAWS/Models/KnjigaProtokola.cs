@@ -9,22 +9,38 @@ namespace JAWS.Models
 {
     public class KnjigaProtokola
     {
-        #region Properties
+        #region Instance
+
         [NotMapped]
-        public List<StomatoloskaUsluga> stomatoloskeUsluge { get; set; } = new List<StomatoloskaUsluga>();
+        private static KnjigaProtokola Instance;
 
         #endregion
 
         #region Konstruktori
 
-        public KnjigaProtokola()
+        private KnjigaProtokola()
         {
         }
 
         #endregion
 
+        #region Properties
+
+        [NotMapped]
+        public static List<StomatoloskaUsluga> KnjigaProtokolaList { get; set; } = new List<StomatoloskaUsluga>();
+
+        #endregion
+
         #region Metode
 
+        public static KnjigaProtokola DajKnjiguProtokola()
+        {
+            if (Instance == null)
+            {
+                Instance = new KnjigaProtokola();
+            }
+            return Instance;
+        }
 
         #endregion
     }

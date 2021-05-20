@@ -35,7 +35,7 @@ namespace JAWS.Models
 
         public void promijeniCijenu(string nazivUsluge, double novaCijenaUsluge)
         {
-            //uslugeICijene[nazivUsluge].Item2 = novaCijenaUsluge;
+            //uslugeICijene[0].Item2 = novaCijenaUsluge;
             /*       foreach(var first in uslugeICijene)
                {
                    if(first.Item1 == nazivUsluge)
