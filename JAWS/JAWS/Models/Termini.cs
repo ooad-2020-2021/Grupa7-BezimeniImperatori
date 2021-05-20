@@ -53,7 +53,7 @@ namespace JAWS.Models
         public Termin VratiTermin(DateTime datumVrijeme)
         {
             foreach(var t in TerminiList){ //doraditi
-                if (DateTime.Compare(t.vrijemeTermina, datumVrijeme)==0) return t;
+                if (DateTime.Compare(t.VrijemeTermina, datumVrijeme)==0) return t;
             }
             return null;    
         }
