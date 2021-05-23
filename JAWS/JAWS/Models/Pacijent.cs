@@ -16,21 +16,13 @@ namespace JAWS.Models
         Z,
     }
 
-    public class DatumIzProšlosti : RangeAttribute
-    {
-        public DatumIzProšlosti() : base(typeof(DateTime), DateTime.MinValue.ToString(), DateTime.Now.ToString())
-        {
-
-        }
-    }
-
     public class Pacijent : Korisnik
     {
         #region Properties
         [Required]
         [DataType(DataType.Date)]
-        [DatumIzProšlosti(ErrorMessage = "Neispravan datum!")]
         [DisplayName("Datum rođenja: ")]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
         public DateTime datumRodjenja { get; set; }
 
         [Required]
@@ -39,7 +31,7 @@ namespace JAWS.Models
 
         [Required]
         [EnumDataType(typeof(Spol))]
-        [DisplayName("Spol: Muško(M) / Žensko(Z)")]
+        [DisplayName("Spol: ")]
         public char spol { get; set; }
 
         [Required]
@@ -53,11 +45,11 @@ namespace JAWS.Models
         [DisplayName("Zdravstvene napomene: ")]
         public string zdravstveneNapomene { get; set; }
         //ima loyal karticu da/ne
-        public LoyalKartica? loyalKartica  { get; set; }
+        public LoyalKartica? loyalKartica { get; set; } = null;
 
         #endregion
         #region Konstruktor i destruktor
-        public Pacijent(int iD, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, char spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene, LoyalKartica loyalKartica) : base(iD, imePrezime, email, sifra)
+        public Pacijent(int iD, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, char spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene) : base(iD, imePrezime, email, sifra)
         {
             this.datumRodjenja = datumRodjenja;
             this.brojTelefona = brojTelefona;
@@ -65,7 +57,6 @@ namespace JAWS.Models
             this.prebivaliste = prebivaliste;
             this.jedinstveniMatičniBroj = jedinstveniMatičniBroj;
             this.zdravstveneNapomene = zdravstveneNapomene;
-            this.loyalKartica = loyalKartica;
         }
         ~Pacijent()
         {

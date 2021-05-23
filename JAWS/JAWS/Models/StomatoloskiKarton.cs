@@ -16,7 +16,7 @@ namespace JAWS.Models
         [Key]
         [Required]
         [DisplayName("Broj kartona: ")]
-        public int brojKartona { get; set; }
+        public int Id { get; set; }
 
         [Required]
         //[DisplayName("Pacijent: ")]
@@ -41,9 +41,9 @@ namespace JAWS.Models
 
         #region Konstruktori
 
-    public StomatoloskiKarton(int brojKartona, DateTime datumOtvaranjaKartona, Pacijent pacijent, List<string> medicinksiPodaci)
+    public StomatoloskiKarton(int Id, DateTime datumOtvaranjaKartona, Pacijent pacijent, List<string> medicinksiPodaci)
         {
-            this.brojKartona = brojKartona;
+            this.Id = Id;
             this.datumOtvaranjaKartona = datumOtvaranjaKartona;
             this.pacijent = pacijent;
             this.medicinskiPodaci = medicinksiPodaci;
