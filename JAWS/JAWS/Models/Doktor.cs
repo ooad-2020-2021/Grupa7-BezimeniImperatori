@@ -12,7 +12,7 @@ namespace JAWS.Models
 
         #endregion
 
-        #region Konstruktor i destruktor
+        #region Konstruktor
         public Doktor(int iD, string imePrezime, string email, string sifra) : base(iD, imePrezime, email, sifra) { }
         #endregion
 
