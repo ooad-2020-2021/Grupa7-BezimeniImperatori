@@ -25,8 +25,11 @@ namespace JAWS.Models
         [Required]
         [DisplayName("Vrijeme željenog termina: ")]
         [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
+        public DateTime vrijemeTermina { get; set; }
+        [DatumIzProšlosti(ErrorMessage = "Neispravan datum!")]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
         public DateTime VrijemeTermina { get; set; }
-       
+
         [Required]
         public bool ZauzetostTermina { get; set; } = false;
 
@@ -34,7 +37,6 @@ namespace JAWS.Models
         [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Obrazloženje zakazivanja termina mora imati barem 10 karaktera!")]
         public string ObrazlozenjeTermina { get; set; } = "";
 
-        public int TerminId { get; set; }
 
         #endregion
 
