@@ -24,17 +24,9 @@ namespace JAWS.Models
 
         [Required]
         [DisplayName("Vrijeme željenog termina: ")]
-<<<<<<< HEAD
-        [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
-        public DateTime vrijemeTermina { get; set; }
-        [DatumIzProšlosti(ErrorMessage = "Neispravan datum!")]
         [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
         public DateTime VrijemeTermina { get; set; }
-=======
-        [DisplayFormat(DataFormatString = "{dd/MM/yyyy HH:mm}")]
-        public DateTime VrijemeTermina { get; set; }
-       
->>>>>>> 2947defc08c17d435927c7369d0178d8b0a7d38d
+        
         [Required]
         public bool ZauzetostTermina { get; set; } = false;
 
