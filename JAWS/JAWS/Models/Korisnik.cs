@@ -34,6 +34,7 @@ namespace JAWS.Models
 
         #region Konstruktor
         //public Student() { }
+        public Korisnik() { }
         public Korisnik(int iD, string imePrezime, string email, string sifra)
         {
             ID = iD;
