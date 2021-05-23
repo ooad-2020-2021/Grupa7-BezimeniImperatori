@@ -14,6 +14,7 @@ namespace JAWS.Models
         [Required]
         [DataType(DataType.Date)]
         [DisplayName("Datum pružanja usluge: ")]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
         public DateTime datumPruzanjaUsluga { get; set; }
 
         [Required]
@@ -21,7 +22,7 @@ namespace JAWS.Models
         public string oboljenje { get; set; }
 
         [DisplayName("Rtg snimak: ")]
-        public string rtgSnimak { get; set; } = "";
+        public string rtgSnimak { get; set; } = ""; //kako realizovati
 
         [DisplayName("Napomene: ")]
         public string napomene { get; set; }
@@ -33,16 +34,14 @@ namespace JAWS.Models
         [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Izvještaj terapije mora imati barem 10 karaktera!")]
         [DisplayName("Izvještaj terapije: ")]
         public string izvjestajTerapije { get; set; }
-
-        // public string opisUsluge { get; set; }
-
+        public int kartonId;
+        public int knjigaProtokolaId; //singleton
         #endregion
 
         #region Konstruktori
         
     public StomatoloskaUsluga(DateTime datumPruzanjaUsluga, string oboljenje, string izvjestajTerapije)
         {
-            //this.pacijent = pacijent;
             this.datumPruzanjaUsluga = datumPruzanjaUsluga;
             this.oboljenje = oboljenje;
             this.izvjestajTerapije = izvjestajTerapije;
