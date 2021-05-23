@@ -29,6 +29,9 @@ namespace JAWS.Models
         [NotMapped]
         public static List<StomatoloskaUsluga> KnjigaProtokolaList { get; set; } = new List<StomatoloskaUsluga>();
 
+        [Required]
+        public int Id { get; set; }
+
         #endregion
 
         #region Metode

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,10 @@ namespace JAWS.Models
 
         [NotMapped]
         public static List<Kontakt> Kontakti { get; set; } = new List<Kontakt> ();
+
+        [Required]
+        public int Id { get; set; }
+
         #endregion
 
         #region Konstruktori
@@ -50,7 +55,17 @@ namespace JAWS.Models
         {
             return ("Naziv firme: " + kontakt.nazivFirme + "\nBroj telefona: " + kontakt.brojTelefona + "\nAdresa: " + kontakt.adresa);
         }
+/*
+        public void specificSortirajAdresar()
+        {
+            
+        }
 
+        public Kontakt scpecificPretraziAdresar(string nazivFirme)
+        {
+
+        }
+*/
         #endregion
 
     }
