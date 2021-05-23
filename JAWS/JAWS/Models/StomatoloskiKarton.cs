@@ -41,6 +41,8 @@ namespace JAWS.Models
 
         #region Konstruktori
 
+        public StomatoloskiKarton() { }
+
     public StomatoloskiKarton(int Id, DateTime datumOtvaranjaKartona, Pacijent pacijent, List<string> medicinksiPodaci)
         {
             this.Id = Id;
