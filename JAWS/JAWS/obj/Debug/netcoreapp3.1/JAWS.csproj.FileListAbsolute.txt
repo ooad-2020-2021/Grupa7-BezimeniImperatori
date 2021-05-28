@@ -157,3 +157,13 @@ C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\View
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Kontakt\Details.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Kontakt\Edit.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Kontakt\Index.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Pacijent\Create.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Pacijent\Delete.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Pacijent\Details.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Pacijent\Edit.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Pacijent\Index.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Doktor\Create.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Doktor\Delete.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Doktor\Details.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Doktor\Edit.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Doktor\Index.cshtml.g.cs

@@ -19,5 +19,9 @@ namespace JAWS.Data
         public DbSet<JAWS.Models.Kontakt> Kontakt { get; set; }
 
         public DbSet<JAWS.Models.Pacijent> Pacijent { get; set; }
+
+        public DbSet<JAWS.Models.Doktor> Doktor { get; set; }
+
+        public DbSet<JAWS.Models.Termin> Termin { get; set; }
     }
 }

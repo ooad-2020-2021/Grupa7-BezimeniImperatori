@@ -13,6 +13,7 @@ namespace JAWS.Models
         #endregion
 
         #region Konstruktor
+        public Doktor() { }
         public Doktor(int iD, string imePrezime, string email, string sifra) : base(iD, imePrezime, email, sifra) { }
         #endregion
 
