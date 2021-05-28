@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -16,6 +17,18 @@ namespace JAWS.Models
 
         #endregion
 
+        #region Properties
+
+        /* [NotMapped]
+         public static List<StomatoloskaUsluga> KnjigaProtokolaList { get; set; } = new List<StomatoloskaUsluga>(); */
+
+        [Key]
+        [Required]
+        [DisplayName("ID knjige protokola: ")]
+        public int Id { get; set; }
+
+        #endregion
+
         #region Konstruktori
 
         private KnjigaProtokola()
@@ -24,15 +37,6 @@ namespace JAWS.Models
 
         #endregion
 
-        #region Properties
-
-        [NotMapped]
-        public static List<StomatoloskaUsluga> KnjigaProtokolaList { get; set; } = new List<StomatoloskaUsluga>();
-
-        [Required]
-        public int Id { get; set; }
-
-        #endregion
 
         #region Metode
 
