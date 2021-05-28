@@ -28,6 +28,7 @@ namespace JAWS.Models
         public DateTime VrijemeTermina { get; set; }
         
         [Required]
+        [DisplayName("Zauzetost: ")]
         public bool ZauzetostTermina { get; set; } = false;
 
         [DisplayName("Obrazloženje za zakazivanje termina: ")]
@@ -39,7 +40,10 @@ namespace JAWS.Models
         #endregion
 
         #region Konstruktor
+        public Termin()
+        {
 
+        }
         public Termin(Pacijent pacijent, DateTime vrijemeTermina, string obrazlozenjeTermina)
         {
             this.Pacijent = pacijent;
