@@ -1,0 +1,65 @@
+﻿@model IEnumerable<JAWS.Models.StomatoloskaUsluga>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.datumPruzanjaUsluga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oboljenje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rtgSnimak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.napomene)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opisUsluge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.izvjestajTerapije)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.datumPruzanjaUsluga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.oboljenje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rtgSnimak)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.napomene)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.opisUsluge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.izvjestajTerapije)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

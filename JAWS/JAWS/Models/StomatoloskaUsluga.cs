@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +12,11 @@ namespace JAWS.Models
     {
 
         #region Properties
+        [Key]
+        [Required]
+        [DisplayName("ID Usluge: ")] //dodat ID iako ga nema na dijagramu
+        public int Id { get; set; }
+
         [Required]
         [DataType(DataType.Date)]
         [DisplayName("Datum pružanja usluge: ")]
@@ -34,13 +40,19 @@ namespace JAWS.Models
         [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Izvještaj terapije mora imati barem 10 karaktera!")]
         [DisplayName("Izvještaj terapije: ")]
         public string izvjestajTerapije { get; set; }
+        [ForeignKey("StomatoloskiKarton")]
         public int kartonId;
+        [ForeignKey("KnjigaProtokola")]
         public int knjigaProtokolaId; //singleton
         #endregion
 
         #region Konstruktori
-        
-    public StomatoloskaUsluga(DateTime datumPruzanjaUsluga, string oboljenje, string izvjestajTerapije)
+
+        public StomatoloskaUsluga()
+        {
+
+        }
+        public StomatoloskaUsluga(DateTime datumPruzanjaUsluga, string oboljenje, string izvjestajTerapije)
         {
             this.datumPruzanjaUsluga = datumPruzanjaUsluga;
             this.oboljenje = oboljenje;

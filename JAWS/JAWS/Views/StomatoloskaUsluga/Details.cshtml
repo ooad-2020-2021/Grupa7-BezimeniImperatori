@@ -1,0 +1,54 @@
+﻿@model JAWS.Models.StomatoloskaUsluga
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StomatoloskaUsluga</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datumPruzanjaUsluga)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datumPruzanjaUsluga)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.oboljenje)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.oboljenje)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rtgSnimak)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rtgSnimak)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.napomene)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.napomene)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.opisUsluge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.opisUsluge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.izvjestajTerapije)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.izvjestajTerapije)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace JAWS.Models
 {
@@ -15,6 +17,10 @@ namespace JAWS.Models
         private static Cjenovnik Instance;
         #endregion
         #region Properties
+        [Key]
+        [Required]
+        [DisplayName("ID Cjenovnika: ")] //probali smo pronaći anotaciju za klas bez PK, nismo uspjeli
+        public int Id { get; set; }
 
         [NotMapped]
         public static List<Tuple<string, double>> UslugeICijene { get; set; } = new List<Tuple<string, double>>();

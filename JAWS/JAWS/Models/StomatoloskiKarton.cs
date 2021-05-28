@@ -15,12 +15,12 @@ namespace JAWS.Models
 
         [Key]
         [Required]
-        [DisplayName("Broj kartona: ")]
+        [DisplayName("Id kartona: ")]
         public int Id { get; set; }
 
         [Required]
         //[DisplayName("Pacijent: ")]
-        public Pacijent pacijent { get; set; }
+        public Pacijent Pacijent { get; set; } //da li izbrisati referencu pa staviti FK
 
         [Required]
         [DataType(DataType.Date)]
@@ -31,9 +31,7 @@ namespace JAWS.Models
         [NotMapped]
         public List<string> medicinskiPodaci { get; set; }
 
-        [NotMapped]
-        public List<StomatoloskaUsluga> kolekcijaUsluga { get; set; }
-
+        //izbrisana kolekcija usluga
         [DisplayName("Posjeduje loyal karticu")]
         public bool posjedovanjeLoyalKartice { get; set; } = false;
 
@@ -47,7 +45,7 @@ namespace JAWS.Models
         {
             this.Id = Id;
             this.datumOtvaranjaKartona = datumOtvaranjaKartona;
-            this.pacijent = pacijent;
+            this.Pacijent = Pacijent;
             this.medicinskiPodaci = medicinksiPodaci;
         }
 
@@ -55,16 +53,16 @@ namespace JAWS.Models
 
         #region Metode
 
-        /*public List<StomatoloskaUsluga> dajUslugeObavljeneNaTerminu(DateTime datumTermina)
+        /*public List<StomatoloskaUsluga> dajUslugeObavljeneNaTerminu(DateTime datumTermina) IMPLEMENTIRATI
         {
             foreach(var dat in kolekcijaUsluga)
             {
-                if(dat.datumPruzanjaUsluga)
+                if(dat.datumPruzanjaUsluga) Proci kroz bazu!
             }
         }
         */
 
-        public Boolean DaLiPosjedujeKarticu()
+        public bool DaLiPosjedujeKarticu()
         {
             return posjedovanjeLoyalKartice;
         }

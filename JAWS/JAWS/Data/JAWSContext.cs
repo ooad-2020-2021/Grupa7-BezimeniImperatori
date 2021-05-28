@@ -25,5 +25,11 @@ namespace JAWS.Data
         public DbSet<JAWS.Models.Termin> Termin { get; set; }
 
         public DbSet<JAWS.Models.KnjigaProtokola> KnjigaProtokola { get; set; }
+
+        public DbSet<JAWS.Models.Cjenovnik> Cjenovnik { get; set; }
+
+        public DbSet<JAWS.Models.StomatoloskaUsluga> StomatoloskaUsluga { get; set; }
+
+        public DbSet<JAWS.Models.StomatoloskiKarton> StomatoloskiKarton { get; set; }
     }
 }
