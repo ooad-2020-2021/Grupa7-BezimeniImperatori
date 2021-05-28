@@ -29,7 +29,10 @@ namespace JAWS.Models
         public static double iznosPopustaNaBrojUsluga { get; set; } = 0.20;
 
         #endregion
-        #region Konstruktor i destruktor
+        #region Konstruktor
+        public LoyalKartica()
+        {
+        }
         public LoyalKartica(int id, DateTime datumKreiranja)
         {
             this.id = id;

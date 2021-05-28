@@ -34,6 +34,9 @@ namespace JAWS.Models
         #endregion
 
         #region Konstruktori
+        public Kontakt()
+        {
+        }
         public Kontakt(string nazivFirme, string brojTelefona, string adresa)
         {
             this.nazivFirme = nazivFirme;
