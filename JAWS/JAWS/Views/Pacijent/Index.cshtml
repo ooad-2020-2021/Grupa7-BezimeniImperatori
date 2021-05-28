@@ -1,0 +1,83 @@
+﻿@model IEnumerable<JAWS.Models.Pacijent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.datumRodjenja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.brojTelefona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prebivaliste)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.jedinstveniMatičniBroj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zdravstveneNapomene)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imePrezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sifra)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.datumRodjenja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.brojTelefona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prebivaliste)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jedinstveniMatičniBroj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zdravstveneNapomene)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.imePrezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sifra)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

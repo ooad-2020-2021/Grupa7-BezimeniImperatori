@@ -49,6 +49,10 @@ namespace JAWS.Models
 
         #endregion
         #region Konstruktor i destruktor
+        public Pacijent()
+        {
+
+        }
         public Pacijent(int iD, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, char spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene) : base(iD, imePrezime, email, sifra)
         {
             this.datumRodjenja = datumRodjenja;

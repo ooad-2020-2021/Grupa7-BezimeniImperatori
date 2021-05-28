@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -10,18 +11,17 @@ namespace JAWS.Models
     public class Adresar
     {
         #region Instance
-
         [NotMapped]
         private static Adresar instance;
         #endregion
         #region Properties
-
-        [NotMapped]
-        public static List<Kontakt> Kontakti { get; set; } = new List<Kontakt> ();
-
+        [Key]
         [Required]
-        public int Id { get; set; }
+        [DisplayName("ID adresara: ")]
+        public int ID { get; set; }
 
+        /*[NotMapped]
+        public static List<Kontakt> Kontakti { get; set; } = new List<Kontakt> (); */
         #endregion
 
         #region Konstruktori
@@ -43,15 +43,21 @@ namespace JAWS.Models
 
         public void DodajKontakt(Kontakt kontakt)
         {
-            Kontakti.Add(kontakt);
+            //pisanje u bazu?
+            //Kontakti.Add(kontakt);
         }
 
-        public void IzbrisiKontakt(int id)
+        public void IzbrisiKontakt(String nazivFirme) 
         {
-            Kontakti.Remove(Kontakti[id]);
+            /*foreach (var item in Kontakti)
+            {
+                if(item.nazivFirme.Equals(nazivFirme))
+                    Kontakti.Remove(var);
+            }*/
+            
         }
 
-        public string DajPodatkeOKontaktu(Kontakt kontakt)
+        public string DajPodatkeOKontaktu(Kontakt kontakt) 
         {
             return ("Naziv firme: " + kontakt.nazivFirme + "\nBroj telefona: " + kontakt.brojTelefona + "\nAdresa: " + kontakt.adresa);
         }
