@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JAWS.Models
 {
-    public class KnjigaProtokola
+    public class KnjigaProtokola : ISortiranje
     {
         #region Instance
 
@@ -49,6 +49,12 @@ namespace JAWS.Models
                 Instance = new KnjigaProtokola();
             }
             return Instance;
+        }
+
+
+        public void SortirajUsluge(List<StomatoloskaUsluga> Usluge)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

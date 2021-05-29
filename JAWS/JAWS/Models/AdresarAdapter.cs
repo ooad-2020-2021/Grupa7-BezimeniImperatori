@@ -16,9 +16,11 @@ namespace JAWS.Models
         {
             //implementirati nakon baze
         }
-        public Kontakt PretraziAdresar()
+       
+
+        public Kontakt PretraziAdresar(string nazivFirme)
         {
-            return null; //implementirati nakon baze
+            throw new NotImplementedException(); //implementirati nakon baze
         }
         #endregion
     }

@@ -10,6 +10,7 @@ using JAWS.Models;
 
 namespace JAWS.Controllers
 {
+    //provjeravac RTG snimka implementirati
     public class StomatoloskaUslugaController : Controller
     {
         private readonly JAWSContext _context;
