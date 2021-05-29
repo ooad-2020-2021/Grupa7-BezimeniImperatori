@@ -31,6 +31,9 @@ namespace JAWS.Models
         [DisplayName("Adresa: ")]
         public string adresa { get; set; }
 
+        [ForeignKey("Adresar")]
+        public int AdresarId; //Singleton
+
         #endregion
 
         #region Konstruktori

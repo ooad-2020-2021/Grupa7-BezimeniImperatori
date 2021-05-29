@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace JAWS.Models
 {
+    //Potrebno implementirati Bridge patern na KorisnikController
     abstract public class Korisnik
     {
         #region Properties
