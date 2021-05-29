@@ -27,6 +27,8 @@ namespace JAWS.Models
         [DisplayName("ID knjige protokola: ")]
         public int Id { get; set; }
 
+        public string NapomeneZaDoktora { get; set; }
+
         #endregion
 
         #region Konstruktori

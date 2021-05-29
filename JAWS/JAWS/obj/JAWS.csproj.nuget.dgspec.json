@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\JAWS.csproj": {}
+    "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\JAWS.csproj": {
+    "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\JAWS.csproj",
+        "projectUniqueName": "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj",
         "projectName": "JAWS",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\JAWS.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Projekat\\JAWS\\JAWS\\obj\\",
+        "projectPath": "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\JAWS.csproj",
+        "packagesPath": "C:\\Users\\XY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\XY\\source\\repos\\Grupa7-BezimeniImperatori\\JAWS\\JAWS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XY\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

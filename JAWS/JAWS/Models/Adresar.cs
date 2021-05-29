@@ -20,6 +20,10 @@ namespace JAWS.Models
         [DisplayName("ID adresara: ")]
         public int ID { get; set; }
 
+        public string NazivOrdinacije { get; set; }
+
+        public string BrojTelefonaOrdinacije { get; set; }
+
         /*[NotMapped]
         public static List<Kontakt> Kontakti { get; set; } = new List<Kontakt> (); */
         #endregion
