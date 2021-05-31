@@ -14,29 +14,29 @@ namespace JAWS.Models
         [Key]
         [Required]
         [DisplayName("ID Korisnika: ")]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [DisplayName("Ime i Prezime: ")]
-        public string imePrezime { get; set; }
+        public string ImePrezime { get; set; }
 
         [Required]
         [DisplayName("E-mail: ")]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [StringLength(int.MaxValue, MinimumLength = 6, ErrorMessage = "Nedovoljan broj karaktera!")]
         [DisplayName("Šifra (minimum 6 karaktera): ")]
-        public string sifra { get; set; }
+        public string Sifra { get; set; }
         #endregion
         #region Konstruktor
         public Korisnik() { }
-        public Korisnik(int iD, string imePrezime, string email, string sifra)
+        public Korisnik(int Id, string imePrezime, string email, string sifra)
         {
-            ID = iD;
-            this.imePrezime = imePrezime;
-            this.email = email;
-            this.sifra = sifra;
+            this.Id = Id;
+            this.ImePrezime = imePrezime;
+            this.Email = email;
+            this.Sifra = sifra;
         }
 
         #endregion
@@ -44,7 +44,7 @@ namespace JAWS.Models
 
         public void PromijeniSifru(string novaSifra)
         {
-            sifra = novaSifra;
+            Sifra = novaSifra;
         }
 
         #endregion
