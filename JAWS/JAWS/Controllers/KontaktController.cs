@@ -34,7 +34,7 @@ namespace JAWS.Controllers
             }
 
             var kontakt = await _context.Kontakt
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (kontakt == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace JAWS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,nazivFirme,brojTelefona,adresa")] Kontakt kontakt)
         {
-            if (id != kontakt.id)
+            if (id != kontakt.Id)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace JAWS.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KontaktExists(kontakt.id))
+                    if (!KontaktExists(kontakt.Id))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace JAWS.Controllers
             }
 
             var kontakt = await _context.Kontakt
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (kontakt == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace JAWS.Controllers
 
         private bool KontaktExists(int id)
         {
-            return _context.Kontakt.Any(e => e.id == id);
+            return _context.Kontakt.Any(e => e.Id == id);
         }
     }
 }

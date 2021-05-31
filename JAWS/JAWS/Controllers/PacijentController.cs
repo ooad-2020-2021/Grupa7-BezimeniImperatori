@@ -34,7 +34,7 @@ namespace JAWS.Controllers
             }
 
             var pacijent = await _context.Pacijent
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (pacijent == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace JAWS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("datumRodjenja,brojTelefona,spol,prebivaliste,jedinstveniMatičniBroj,zdravstveneNapomene,ID,imePrezime,email,sifra")] Pacijent pacijent)
         {
-            if (id != pacijent.ID)
+            if (id != pacijent.Id)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace JAWS.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PacijentExists(pacijent.ID))
+                    if (!PacijentExists(pacijent.Id))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace JAWS.Controllers
             }
 
             var pacijent = await _context.Pacijent
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (pacijent == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace JAWS.Controllers
 
         private bool PacijentExists(int id)
         {
-            return _context.Pacijent.Any(e => e.ID == id);
+            return _context.Pacijent.Any(e => e.Id == id);
         }
     }
 }

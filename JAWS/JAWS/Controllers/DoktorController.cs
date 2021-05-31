@@ -34,7 +34,7 @@ namespace JAWS.Controllers
             }
 
             var doktor = await _context.Doktor
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (doktor == null)
             {
                 return NotFound();
@@ -102,7 +102,7 @@ namespace JAWS.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DoktorExists(doktor.ID))
+                    if (!DoktorExists(doktor.Id))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace JAWS.Controllers
             }
 
             var doktor = await _context.Doktor
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (doktor == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace JAWS.Controllers
 
         private bool DoktorExists(int id)
         {
-            return _context.Doktor.Any(e => e.ID == id);
+            return _context.Doktor.Any(e => e.Id == id);
         }
     }
 }
