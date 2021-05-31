@@ -28,13 +28,8 @@ namespace JAWS.Models
         [StringLength(int.MaxValue, MinimumLength = 6, ErrorMessage = "Nedovoljan broj karaktera!")]
         [DisplayName("Šifra (minimum 6 karaktera): ")]
         public string sifra { get; set; }
-
-        /* [NotMapped]
-         public List<Student> UpisaniStudenti { get; set; } */
         #endregion
-
         #region Konstruktor
-        //public Student() { }
         public Korisnik() { }
         public Korisnik(int iD, string imePrezime, string email, string sifra)
         {
@@ -45,7 +40,6 @@ namespace JAWS.Models
         }
 
         #endregion
-
         #region Metode
 
         public void PromijeniSifru(string novaSifra)

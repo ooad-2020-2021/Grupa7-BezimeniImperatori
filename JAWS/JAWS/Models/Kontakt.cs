@@ -9,27 +9,27 @@ using System.Threading.Tasks;
 namespace JAWS.Models
 {
     public class Kontakt
-    {        
+    {
         #region Properties
 
         [Key]
         [Required]
-        [DisplayName("ID: ")]
-        public int id { get; set; }
+        [DisplayName("Id: ")]
+        public int Id { get; set; }
 
         [Required]
         [DisplayName("Naziv firme: ")]
         [StringLength(int.MaxValue, MinimumLength = 3, ErrorMessage = "Naziv firme mora imati barem 3 karaktera!")]
-        public string nazivFirme { get; set; }
+        public string NazivFirme { get; set; }
 
         [Required]
         [DisplayName("Broj telefona: ")]
         [DisplayFormat(DataFormatString = "{DDD/DDD-DDD}")]
-        public string brojTelefona { get; set; }
+        public string BrojTelefona { get; set; }
 
         [Required]
         [DisplayName("Adresa: ")]
-        public string adresa { get; set; }
+        public string Adresa { get; set; }
 
         [ForeignKey("Adresar")]
         public int AdresarId; //Singleton
@@ -42,9 +42,9 @@ namespace JAWS.Models
         }
         public Kontakt(string nazivFirme, string brojTelefona, string adresa)
         {
-            this.nazivFirme = nazivFirme;
-            this.brojTelefona = brojTelefona;
-            this.adresa = adresa;
+            this.NazivFirme = nazivFirme;
+            this.BrojTelefona = brojTelefona;
+            this.Adresa = adresa;
         }
 
         #endregion
