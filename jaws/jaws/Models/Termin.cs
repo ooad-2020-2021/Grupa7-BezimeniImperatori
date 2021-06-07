@@ -19,6 +19,11 @@ namespace JAWS.Models
     {
 
         #region Properties
+        [Key]
+        [Required]
+        [DisplayName("ID Termina: ")]
+        public int TerminId { get; set; }
+
         [Required]
         [ForeignKey("Pacijent: ")] //Referenca na pacijenta koji je zauzeo Termin
         public int PacijentId { get; set; }
@@ -35,9 +40,6 @@ namespace JAWS.Models
         [DisplayName("Obrazloženje za zakazivanje termina: ")]
         [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Obrazloženje zakazivanja termina mora imati barem 10 karaktera!")]
         public string ObrazlozenjeTermina { get; set; } = "";
-
-        public int TerminId { get; set; }
-
         #endregion
 
         #region Konstruktor
