@@ -63,7 +63,10 @@ namespace JAWS.Models
 
         public string DajPodatkeOKontaktu(Kontakt kontakt) 
         {
-            return ("Naziv firme: " + kontakt.nazivFirme + "\nBroj telefona: " + kontakt.brojTelefona + "\nAdresa: " + kontakt.adresa);
+            // Not developed yet.
+            throw new NotImplementedException();
+            //return ("Naziv firme: " + kontakt.nazivFirme + "\nBroj telefona: " + kontakt.brojTelefona + "\nAdresa: " + kontakt.adresa);
+            //nakon sto se kreira baza implementirati
         }
 /*
         public void specificSortirajAdresar()

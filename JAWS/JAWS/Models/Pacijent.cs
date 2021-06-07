@@ -23,29 +23,30 @@ namespace JAWS.Models
         [DataType(DataType.Date)]
         [DisplayName("Datum rođenja: ")]
         [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
-        public DateTime datumRodjenja { get; set; }
+        public DateTime DatumRodjenja { get; set; }
 
         [Required]
         [DisplayName("Broj telefona: ")]
-        public string brojTelefona { get; set; }
+        public string BrojTelefona { get; set; }
 
         [Required]
         [EnumDataType(typeof(Spol))]
         [DisplayName("Spol: ")]
-        public char spol { get; set; }
+        public char Spol { get; set; }
 
         [Required]
         [DisplayName("Prebivalište: ")]
-        public string prebivaliste { get; set; }
+        public string Prebivaliste { get; set; }
 
         [Required]
         [DisplayName("Jedinstveni matični broj: ")]
-        public string jedinstveniMatičniBroj { get; set; }
+        public string JedinstveniMatičniBroj { get; set; }
 
         [DisplayName("Zdravstvene napomene: ")]
-        public string zdravstveneNapomene { get; set; }
+        public string ZdravstveneNapomene { get; set; }
         //ima loyal karticu da/ne
-        public LoyalKartica? loyalKartica { get; set; } = null;
+        [ForeignKey("LoyalKartica")]
+        public int LoyalKarticaId { get; set; }
 
         #endregion
         #region Konstruktor i destruktor
@@ -53,18 +54,18 @@ namespace JAWS.Models
         {
 
         }
-        public Pacijent(int iD, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, char spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene) : base(iD, imePrezime, email, sifra)
+        public Pacijent(int Id, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, char spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene) : base(Id, imePrezime, email, sifra)
         {
-            this.datumRodjenja = datumRodjenja;
-            this.brojTelefona = brojTelefona;
-            this.spol = spol;
-            this.prebivaliste = prebivaliste;
-            this.jedinstveniMatičniBroj = jedinstveniMatičniBroj;
-            this.zdravstveneNapomene = zdravstveneNapomene;
+            this.DatumRodjenja = datumRodjenja;
+            this.BrojTelefona = brojTelefona;
+            this.Spol = spol;
+            this.Prebivaliste = prebivaliste;
+            this.JedinstveniMatičniBroj = jedinstveniMatičniBroj;
+            this.ZdravstveneNapomene = zdravstveneNapomene;
         }
         ~Pacijent()
         {
-           loyalKartica = null; //mozda ne treba uopce
+
         }
         #endregion
         #region Metode

@@ -19,21 +19,21 @@ namespace JAWS.Models
         public int Id { get; set; }
 
         [Required]
-        //[DisplayName("Pacijent: ")]
-        public Pacijent Pacijent { get; set; } //da li izbrisati referencu pa staviti FK
+        [ForeignKey("Pacijent: ")]
+        public int PacijentId { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
         [DisplayName("Datum otvaranja kartona: ")]
-        public DateTime datumOtvaranjaKartona { get; set; }
+        public DateTime DatumOtvaranjaKartona { get; set; }
 
 
         [NotMapped]
-        public List<string> medicinskiPodaci { get; set; }
+        public List<string> MedicinskiPodaci { get; set; }
 
         //izbrisana kolekcija usluga
         [DisplayName("Posjeduje loyal karticu")]
-        public bool posjedovanjeLoyalKartice { get; set; } = false;
+        public bool PosjedovanjeLoyalKartice { get; set; } = false;
 
         #endregion
 
@@ -41,12 +41,12 @@ namespace JAWS.Models
 
         public StomatoloskiKarton() { }
 
-    public StomatoloskiKarton(int Id, DateTime datumOtvaranjaKartona, Pacijent pacijent, List<string> medicinksiPodaci)
+    public StomatoloskiKarton(int Id, DateTime datumOtvaranjaKartona, int PacijentId, List<string> medicinksiPodaci)
         {
             this.Id = Id;
-            this.datumOtvaranjaKartona = datumOtvaranjaKartona;
-            this.Pacijent = Pacijent;
-            this.medicinskiPodaci = medicinksiPodaci;
+            this.DatumOtvaranjaKartona = datumOtvaranjaKartona;
+            this.PacijentId = PacijentId; //preko baze
+            this.MedicinskiPodaci = medicinksiPodaci;
         }
 
         #endregion
@@ -64,7 +64,7 @@ namespace JAWS.Models
 
         public bool DaLiPosjedujeKarticu()
         {
-            return posjedovanjeLoyalKartice;
+            return PosjedovanjeLoyalKartice;
         }
 
         #endregion

@@ -11,22 +11,22 @@ namespace JAWS.Models
         [Key]
         [Required]
         [DisplayName("ID loyal kartice: ")]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [DisplayName("Trajanje kartice (mjeseci): ")]
-        public static int trajanjeKarticeUMjesecima { get; set; } = 6;
+        public static int TrajanjeKarticeUMjesecima { get; set; } = 6;
 
         [Required]
         [DataType(DataType.Date)]
         [DatumIzProšlosti(ErrorMessage = "Neispravan datum!")]
         [DisplayName("Datum kreiranja: ")]
-        public DateTime datumKreiranja { get; set; }
+        public DateTime DatumKreiranja { get; set; }
 
         [DisplayName("Iznos fiksnog popusta: ")]
-        public static double iznosFiksnogPopusta { get; set; } = 0.05;
+        public static double IznosFiksnogPopusta { get; set; } = 0.05;
 
         [DisplayName("Iznos popusta na broj usluga: ")]
-        public static double iznosPopustaNaBrojUsluga { get; set; } = 0.20;
+        public static double IznosPopustaNaBrojUsluga { get; set; } = 0.20;
 
         #endregion
         #region Konstruktor
@@ -35,27 +35,27 @@ namespace JAWS.Models
         }
         public LoyalKartica(int id, DateTime datumKreiranja)
         {
-            this.id = id;
-            this.datumKreiranja = datumKreiranja;
+            this.Id = id;
+            this.DatumKreiranja = datumKreiranja;
         }
         #endregion
 
         #region Metode
         public static void PostaviIznosTrajanja(int mjeseciTrajanjaKartice)
         {
-            trajanjeKarticeUMjesecima = mjeseciTrajanjaKartice;
+            TrajanjeKarticeUMjesecima = mjeseciTrajanjaKartice;
         }
         public static void PostaviIznosFiksnogPopusta(Double iznos)
         {
-            iznosFiksnogPopusta = iznos;
+            IznosFiksnogPopusta = iznos;
         }
         public static void PostaviIznosPopustaNaBrojUsluga(Double iznos)
         {
-            iznosPopustaNaBrojUsluga = iznos;
+            IznosPopustaNaBrojUsluga = iznos;
         }
         public DateTime DajDatumIsteka()
         {
-            return datumKreiranja.AddMonths(trajanjeKarticeUMjesecima); //get?
+            return DatumKreiranja.AddMonths(TrajanjeKarticeUMjesecima); //get?
         }
         public bool DajStanjeKartice() //ako je true, aktivna je 
         {

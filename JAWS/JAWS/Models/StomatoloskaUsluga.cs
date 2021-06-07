@@ -14,36 +14,36 @@ namespace JAWS.Models
         #region Properties
         [Key]
         [Required]
-        [DisplayName("ID Usluge: ")] //dodat ID iako ga nema na dijagramu
+        [DisplayName("ID Usluge: ")]
         public int Id { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
         [DisplayName("Datum pružanja usluge: ")]
         [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
-        public DateTime datumPruzanjaUsluga { get; set; }
+        public DateTime DatumPruzanjaUsluga { get; set; }
 
         [Required]
         [DisplayName("Oboljenje: ")]
-        public string oboljenje { get; set; }
+        public string Oboljenje { get; set; }
 
         [DisplayName("Rtg snimak: ")]
-        public string rtgSnimak { get; set; } = ""; //kako realizovati
+        public string RtgSnimak { get; set; } = ""; 
 
         [DisplayName("Napomene: ")]
-        public string napomene { get; set; }
+        public string Napomene { get; set; }
 
         [DisplayName("Opis usluge: ")]
-        public string opisUsluge { get; set; }
+        public string OpisUsluge { get; set; }
 
         [Required]
         [StringLength(int.MaxValue, MinimumLength = 10, ErrorMessage = "Izvještaj terapije mora imati barem 10 karaktera!")]
         [DisplayName("Izvještaj terapije: ")]
-        public string izvjestajTerapije { get; set; }
+        public string IzvjestajTerapije { get; set; }
         [ForeignKey("StomatoloskiKarton")]
-        public int kartonId;
-        [ForeignKey("KnjigaProtokola")]
-        public int knjigaProtokolaId; //singleton
+        public int KartonId { get; set; }
+    [   ForeignKey("KnjigaProtokola")]
+        public int KnjigaProtokolaId { get; set; } //singleton
         #endregion
 
         #region Konstruktori
@@ -54,18 +54,18 @@ namespace JAWS.Models
         }
         public StomatoloskaUsluga(DateTime datumPruzanjaUsluga, string oboljenje, string izvjestajTerapije)
         {
-            this.datumPruzanjaUsluga = datumPruzanjaUsluga;
-            this.oboljenje = oboljenje;
-            this.izvjestajTerapije = izvjestajTerapije;
+            this.DatumPruzanjaUsluga = datumPruzanjaUsluga;
+            this.Oboljenje = oboljenje;
+            this.IzvjestajTerapije = izvjestajTerapije;
         }
 
         #endregion
 
         #region Metode
 
-        public string dajOpisUsluge()
+        public string DajOpisUsluge()
         {
-            return opisUsluge;
+            return OpisUsluge;
         }
         
         #endregion
