@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,8 +20,8 @@ namespace JAWS.Models
 
         #region Properties
         [Required]
-        //[DisplayName("")]
-        public Pacijent? Pacijent { get; set; }
+        [ForeignKey("Pacijent: ")] //Referenca na pacijenta koji je zauzeo Termin
+        public int PacijentId { get; set; }
 
         [Required]
         [DisplayName("Vrijeme željenog termina: ")]
@@ -44,9 +45,9 @@ namespace JAWS.Models
         {
 
         }
-        public Termin(Pacijent pacijent, DateTime vrijemeTermina, string obrazlozenjeTermina)
+        public Termin(int pacijentId, DateTime vrijemeTermina, string obrazlozenjeTermina)
         {
-            this.Pacijent = pacijent;
+            this.PacijentId = pacijentId;
             this.VrijemeTermina = vrijemeTermina;
             this.ZauzetostTermina = true;
             this.ObrazlozenjeTermina = obrazlozenjeTermina;
