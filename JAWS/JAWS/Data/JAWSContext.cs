@@ -33,5 +33,18 @@ namespace JAWS.Data
         public DbSet<JAWS.Models.StomatoloskiKarton> StomatoloskiKarton { get; set; }
 
         public DbSet<JAWS.Models.Korisnik> Korisnik { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<LoyalKartica>().ToTable("LoyalKartica");
+            modelBuilder.Entity<Kontakt>().ToTable("Kontakt");
+            modelBuilder.Entity<Pacijent>().ToTable("Pacijent");
+            //modelBuilder.Entity<Doktor>().ToTable("Doktor");
+            modelBuilder.Entity<Termin>().ToTable("Termin");
+            modelBuilder.Entity<KnjigaProtokola>().ToTable("KnjigaProtokola");
+            modelBuilder.Entity<StomatoloskaUsluga>().ToTable("StomatoloskaUsluga");
+            modelBuilder.Entity<StomatoloskiKarton>().ToTable("StomatoloskiKarton");
+            modelBuilder.Entity<Korisnik>().ToTable("Korisnik");
+        }
     }
 }
