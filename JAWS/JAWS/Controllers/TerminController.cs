@@ -54,7 +54,7 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina,TerminId")] Termin termin)
+        public async Task<IActionResult> Create([Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina,TerminId")] Termin termin)
+        public async Task<IActionResult> Edit(int id, [Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)
         {
             if (id != termin.TerminId)
             {

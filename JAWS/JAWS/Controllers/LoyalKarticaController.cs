@@ -34,7 +34,7 @@ namespace JAWS.Controllers
             }
 
             var loyalKartica = await _context.LoyalKartica
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (loyalKartica == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,datumKreiranja")] LoyalKartica loyalKartica)
+        public async Task<IActionResult> Create([Bind("Id,DatumKreiranja")] LoyalKartica loyalKartica)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +86,9 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,datumKreiranja")] LoyalKartica loyalKartica)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,DatumKreiranja")] LoyalKartica loyalKartica)
         {
-            if (id != loyalKartica.id)
+            if (id != loyalKartica.Id)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace JAWS.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LoyalKarticaExists(loyalKartica.id))
+                    if (!LoyalKarticaExists(loyalKartica.Id))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace JAWS.Controllers
             }
 
             var loyalKartica = await _context.LoyalKartica
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (loyalKartica == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace JAWS.Controllers
 
         private bool LoyalKarticaExists(int id)
         {
-            return _context.LoyalKartica.Any(e => e.id == id);
+            return _context.LoyalKartica.Any(e => e.Id == id);
         }
     }
 }

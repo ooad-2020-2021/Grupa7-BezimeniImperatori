@@ -10,22 +10,22 @@ using JAWS.Models;
 
 namespace JAWS.Controllers
 {
-    public class StomatoloskaUslugaController : Controller
+    public class KorisnikController : Controller
     {
         private readonly JAWSContext _context;
 
-        public StomatoloskaUslugaController(JAWSContext context)
+        public KorisnikController(JAWSContext context)
         {
             _context = context;
         }
 
-        // GET: StomatoloskaUsluga
+        // GET: Korisnik
         public async Task<IActionResult> Index()
         {
-            return View(await _context.StomatoloskaUsluga.ToListAsync());
+            return View(await _context.Korisnik.ToListAsync());
         }
 
-        // GET: StomatoloskaUsluga/Details/5
+        // GET: Korisnik/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace JAWS.Controllers
                 return NotFound();
             }
 
-            var stomatoloskaUsluga = await _context.StomatoloskaUsluga
+            var korisnik = await _context.Korisnik
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (stomatoloskaUsluga == null)
+            if (korisnik == null)
             {
                 return NotFound();
             }
 
-            return View(stomatoloskaUsluga);
+            return View(korisnik);
         }
 
-        // GET: StomatoloskaUsluga/Create
+        // GET: Korisnik/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: StomatoloskaUsluga/Create
+        // POST: Korisnik/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DatumPruzanjaUsluga,Oboljenje,RtgSnimak,Napomene,OpisUsluge,IzvjestajTerapije,KartonId,KnjigaProtokolaId")] StomatoloskaUsluga stomatoloskaUsluga)
+        public async Task<IActionResult> Create([Bind("Id,ImePrezime,Email,Sifra")] Korisnik korisnik)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(stomatoloskaUsluga);
+                _context.Add(korisnik);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(stomatoloskaUsluga);
+            return View(korisnik);
         }
 
-        // GET: StomatoloskaUsluga/Edit/5
+        // GET: Korisnik/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace JAWS.Controllers
                 return NotFound();
             }
 
-            var stomatoloskaUsluga = await _context.StomatoloskaUsluga.FindAsync(id);
-            if (stomatoloskaUsluga == null)
+            var korisnik = await _context.Korisnik.FindAsync(id);
+            if (korisnik == null)
             {
                 return NotFound();
             }
-            return View(stomatoloskaUsluga);
+            return View(korisnik);
         }
 
-        // POST: StomatoloskaUsluga/Edit/5
+        // POST: Korisnik/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DatumPruzanjaUsluga,Oboljenje,RtgSnimak,Napomene,OpisUsluge,IzvjestajTerapije,KartonId,KnjigaProtokolaId")] StomatoloskaUsluga stomatoloskaUsluga)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ImePrezime,Email,Sifra")] Korisnik korisnik)
         {
-            if (id != stomatoloskaUsluga.Id)
+            if (id != korisnik.Id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace JAWS.Controllers
             {
                 try
                 {
-                    _context.Update(stomatoloskaUsluga);
+                    _context.Update(korisnik);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!StomatoloskaUslugaExists(stomatoloskaUsluga.Id))
+                    if (!KorisnikExists(korisnik.Id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace JAWS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(stomatoloskaUsluga);
+            return View(korisnik);
         }
 
-        // GET: StomatoloskaUsluga/Delete/5
+        // GET: Korisnik/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace JAWS.Controllers
                 return NotFound();
             }
 
-            var stomatoloskaUsluga = await _context.StomatoloskaUsluga
+            var korisnik = await _context.Korisnik
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (stomatoloskaUsluga == null)
+            if (korisnik == null)
             {
                 return NotFound();
             }
 
-            return View(stomatoloskaUsluga);
+            return View(korisnik);
         }
 
-        // POST: StomatoloskaUsluga/Delete/5
+        // POST: Korisnik/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var stomatoloskaUsluga = await _context.StomatoloskaUsluga.FindAsync(id);
-            _context.StomatoloskaUsluga.Remove(stomatoloskaUsluga);
+            var korisnik = await _context.Korisnik.FindAsync(id);
+            _context.Korisnik.Remove(korisnik);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool StomatoloskaUslugaExists(int id)
+        private bool KorisnikExists(int id)
         {
-            return _context.StomatoloskaUsluga.Any(e => e.Id == id);
+            return _context.Korisnik.Any(e => e.Id == id);
         }
     }
 }

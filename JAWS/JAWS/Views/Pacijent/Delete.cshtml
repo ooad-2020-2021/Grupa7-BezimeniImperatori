@@ -12,63 +12,69 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.datumRodjenja)
+            @Html.DisplayNameFor(model => model.DatumRodjenja)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.datumRodjenja)
+            @Html.DisplayFor(model => model.DatumRodjenja)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.brojTelefona)
+            @Html.DisplayNameFor(model => model.BrojTelefona)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.brojTelefona)
+            @Html.DisplayFor(model => model.BrojTelefona)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.spol)
+            @Html.DisplayNameFor(model => model.Spol)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.spol)
+            @Html.DisplayFor(model => model.Spol)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.prebivaliste)
+            @Html.DisplayNameFor(model => model.Prebivaliste)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.prebivaliste)
+            @Html.DisplayFor(model => model.Prebivaliste)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.jedinstveniMatičniBroj)
+            @Html.DisplayNameFor(model => model.JedinstveniMatičniBroj)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.jedinstveniMatičniBroj)
+            @Html.DisplayFor(model => model.JedinstveniMatičniBroj)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.zdravstveneNapomene)
+            @Html.DisplayNameFor(model => model.ZdravstveneNapomene)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.zdravstveneNapomene)
+            @Html.DisplayFor(model => model.ZdravstveneNapomene)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.imePrezime)
+            @Html.DisplayNameFor(model => model.LoyalKarticaId)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.imePrezime)
+            @Html.DisplayFor(model => model.LoyalKarticaId)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.email)
+            @Html.DisplayNameFor(model => model.ImePrezime)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.email)
+            @Html.DisplayFor(model => model.ImePrezime)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.sifra)
+            @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.sifra)
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sifra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sifra)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

@@ -13,22 +13,28 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.datumPruzanjaUsluga)
+                @Html.DisplayNameFor(model => model.DatumPruzanjaUsluga)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.oboljenje)
+                @Html.DisplayNameFor(model => model.Oboljenje)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.rtgSnimak)
+                @Html.DisplayNameFor(model => model.RtgSnimak)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.napomene)
+                @Html.DisplayNameFor(model => model.Napomene)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.opisUsluge)
+                @Html.DisplayNameFor(model => model.OpisUsluge)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.izvjestajTerapije)
+                @Html.DisplayNameFor(model => model.IzvjestajTerapije)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KartonId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KnjigaProtokolaId)
             </th>
             <th></th>
         </tr>
@@ -37,22 +43,28 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.datumPruzanjaUsluga)
+                @Html.DisplayFor(modelItem => item.DatumPruzanjaUsluga)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.oboljenje)
+                @Html.DisplayFor(modelItem => item.Oboljenje)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.rtgSnimak)
+                @Html.DisplayFor(modelItem => item.RtgSnimak)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.napomene)
+                @Html.DisplayFor(modelItem => item.Napomene)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.opisUsluge)
+                @Html.DisplayFor(modelItem => item.OpisUsluge)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.izvjestajTerapije)
+                @Html.DisplayFor(modelItem => item.IzvjestajTerapije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KartonId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KnjigaProtokolaId)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

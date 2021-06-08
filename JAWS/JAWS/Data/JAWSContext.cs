@@ -31,5 +31,7 @@ namespace JAWS.Data
         public DbSet<JAWS.Models.StomatoloskaUsluga> StomatoloskaUsluga { get; set; }
 
         public DbSet<JAWS.Models.StomatoloskiKarton> StomatoloskiKarton { get; set; }
+
+        public DbSet<JAWS.Models.Korisnik> Korisnik { get; set; }
     }
 }

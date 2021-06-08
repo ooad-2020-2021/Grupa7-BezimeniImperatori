@@ -54,7 +54,7 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("datumRodjenja,brojTelefona,spol,prebivaliste,jedinstveniMatičniBroj,zdravstveneNapomene,ID,imePrezime,email,sifra")] Pacijent pacijent)
+        public async Task<IActionResult> Create([Bind("DatumRodjenja,BrojTelefona,Spol,Prebivaliste,JedinstveniMatičniBroj,ZdravstveneNapomene,LoyalKarticaId,Id,ImePrezime,Email,Sifra")] Pacijent pacijent)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("datumRodjenja,brojTelefona,spol,prebivaliste,jedinstveniMatičniBroj,zdravstveneNapomene,ID,imePrezime,email,sifra")] Pacijent pacijent)
+        public async Task<IActionResult> Edit(int id, [Bind("DatumRodjenja,BrojTelefona,Spol,Prebivaliste,JedinstveniMatičniBroj,ZdravstveneNapomene,LoyalKarticaId,Id,ImePrezime,Email,Sifra")] Pacijent pacijent)
         {
             if (id != pacijent.Id)
             {

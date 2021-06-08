@@ -13,31 +13,34 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.datumRodjenja)
+                @Html.DisplayNameFor(model => model.DatumRodjenja)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.brojTelefona)
+                @Html.DisplayNameFor(model => model.BrojTelefona)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.spol)
+                @Html.DisplayNameFor(model => model.Spol)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.prebivaliste)
+                @Html.DisplayNameFor(model => model.Prebivaliste)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.jedinstveniMatičniBroj)
+                @Html.DisplayNameFor(model => model.JedinstveniMatičniBroj)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.zdravstveneNapomene)
+                @Html.DisplayNameFor(model => model.ZdravstveneNapomene)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.imePrezime)
+                @Html.DisplayNameFor(model => model.LoyalKarticaId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.email)
+                @Html.DisplayNameFor(model => model.ImePrezime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.sifra)
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sifra)
             </th>
             <th></th>
         </tr>
@@ -46,36 +49,39 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.datumRodjenja)
+                @Html.DisplayFor(modelItem => item.DatumRodjenja)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.brojTelefona)
+                @Html.DisplayFor(modelItem => item.BrojTelefona)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.spol)
+                @Html.DisplayFor(modelItem => item.Spol)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.prebivaliste)
+                @Html.DisplayFor(modelItem => item.Prebivaliste)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.jedinstveniMatičniBroj)
+                @Html.DisplayFor(modelItem => item.JedinstveniMatičniBroj)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.zdravstveneNapomene)
+                @Html.DisplayFor(modelItem => item.ZdravstveneNapomene)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.imePrezime)
+                @Html.DisplayFor(modelItem => item.LoyalKarticaId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.email)
+                @Html.DisplayFor(modelItem => item.ImePrezime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.sifra)
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                @Html.DisplayFor(modelItem => item.Sifra)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
