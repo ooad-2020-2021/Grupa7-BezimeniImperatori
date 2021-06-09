@@ -15,7 +15,7 @@ namespace JAWS.Models
         [Display(Name = "Žensko")]
         Z,
     }
-
+    [NotMapped]
     public class Pacijent : Korisnik
     {
         #region Properties
