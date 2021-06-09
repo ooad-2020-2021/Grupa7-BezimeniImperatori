@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JAWS.Migrations
 {
     [DbContext(typeof(JAWSContext))]
-    [Migration("20210609032316_JAWS")]
+    [Migration("20210609133007_JAWS")]
     partial class JAWS
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
