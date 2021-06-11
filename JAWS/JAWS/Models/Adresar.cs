@@ -17,7 +17,7 @@ namespace JAWS.Models
         #region Properties
         [Key]
         [Required]
-        [DisplayName("ID adresara: ")]
+        [DisplayName("Id adresara: ")]
         public int ID { get; set; }
 
         public string NazivOrdinacije { get; set; }

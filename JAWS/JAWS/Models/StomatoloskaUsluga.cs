@@ -42,8 +42,9 @@ namespace JAWS.Models
         public string IzvjestajTerapije { get; set; }
         [ForeignKey("StomatoloskiKarton")]
         public int KartonId { get; set; }
-    [   ForeignKey("KnjigaProtokola")]
-        public int KnjigaProtokolaId { get; set; } //singleton
+
+        [ForeignKey("KnjigaProtokola")]
+        public int KnjigaProtokolaId { get; set; }
         #endregion
 
         #region Konstruktori

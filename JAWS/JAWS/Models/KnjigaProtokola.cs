@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JAWS.Models
 {
-    public class KnjigaProtokola : ISortiranje
+    public class KnjigaProtokola : ISortiranje //Lista svih usluga
     {
         #region Instance
 
@@ -24,9 +24,8 @@ namespace JAWS.Models
 
         [Key]
         [Required]
-        [DisplayName("ID knjige protokola: ")]
+        [DisplayName("Id knjige protokola: ")]
         public int Id { get; set; }
-
         public string NapomeneZaDoktora { get; set; }
 
         #endregion

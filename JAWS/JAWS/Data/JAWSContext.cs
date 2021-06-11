@@ -13,6 +13,7 @@ namespace JAWS.Data
             : base(options)
         {
         }
+        public DbSet<JAWS.Models.CjenovnikItem> CjenovnikItem { get; set; }
 
         public DbSet<JAWS.Models.LoyalKartica> LoyalKartica { get; set; }
 
@@ -24,8 +25,6 @@ namespace JAWS.Data
         public DbSet<JAWS.Models.Termin> Termin { get; set; }
 
         public DbSet<JAWS.Models.KnjigaProtokola> KnjigaProtokola { get; set; }
-
-        public DbSet<JAWS.Models.Cjenovnik> Cjenovnik { get; set; }
 
         public DbSet<JAWS.Models.StomatoloskaUsluga> StomatoloskaUsluga { get; set; }
 
@@ -42,15 +41,15 @@ namespace JAWS.Data
                 .HasDiscriminator<string>("KorisnikTip")
                 .HasValue<Pacijent>("Pacijent")
                 .HasValue<Doktor>("Doktor");
-            //  .HasValue<Ime>("Prezime") treba li dalje?
             modelBuilder.Entity<LoyalKartica>().ToTable("LoyalKartica");
             modelBuilder.Entity<Kontakt>().ToTable("Kontakt");
-            //modelBuilder.Entity<Pacijent>().ToTable("Pacijent");
-            //modelBuilder.Entity<Doktor>().ToTable("Doktor");
             modelBuilder.Entity<Termin>().ToTable("Termin");
             modelBuilder.Entity<KnjigaProtokola>().ToTable("KnjigaProtokola");
             modelBuilder.Entity<StomatoloskaUsluga>().ToTable("StomatoloskaUsluga");
             modelBuilder.Entity<StomatoloskiKarton>().ToTable("StomatoloskiKarton");
+            modelBuilder.Entity<CjenovnikItem>().ToTable("CjenovnikItem");
         }
+
+        public DbSet<JAWS.Models.Cjenovnik> Cjenovnik { get; set; }
     }
 }

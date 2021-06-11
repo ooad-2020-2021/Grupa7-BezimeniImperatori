@@ -4,14 +4,16 @@ using JAWS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JAWS.Migrations
 {
     [DbContext(typeof(JAWSContext))]
-    partial class JAWSContextModelSnapshot : ModelSnapshot
+    [Migration("20210611210153_CjenovnikItem_Dodan")]
+    partial class CjenovnikItem_Dodan
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,9 +42,6 @@ namespace JAWS.Migrations
 
                     b.Property<double>("Cijena")
                         .HasColumnType("float");
-
-                    b.Property<int>("CjenovnikId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Naziv")
                         .IsRequired()

@@ -16,14 +16,15 @@ namespace JAWS.Models
         [NotMapped]
         private static Cjenovnik Instance;
         #endregion
+
         #region Properties
         [Key]
         [Required]
-        [DisplayName("ID Cjenovnika: ")] //probali smo pronaći anotaciju za klas bez PK, nismo uspjeli
+        [DisplayName("Id Cjenovnika: ")] //probali smo pronaći anotaciju za klas bez PK, nismo uspjeli
         public int Id { get; set; }
 
         [NotMapped]
-        public static List<Tuple<string, double>> UslugeICijene { get; set; } = new List<Tuple<string, double>>();
+        public static List<CjenovnikItem> CjenovnikLista { get; set; } = new List<CjenovnikItem>();
 
         #endregion
 
@@ -46,32 +47,18 @@ namespace JAWS.Models
             return Instance;
         }
 
-        public void DodajUslugu(string nazivUsluge, double cijenaUsluge)
+        public void DodajUslugu(CjenovnikItem Stavka)
         {
-            UslugeICijene.Add(new Tuple<string, double>(nazivUsluge, cijenaUsluge));
+            CjenovnikLista.Add(Stavka);
         }
 
-        public void PromijeniCijenu(string nazivUsluge, double novaCijenaUsluge)
-        {           
-                 foreach(var Usluga in UslugeICijene)
-               {
-                   if(Usluga.Item1.Equals(nazivUsluge))
-                   {
-                    UslugeICijene.Remove(Usluga);
-                    UslugeICijene.Add(new Tuple<string, double>(nazivUsluge, novaCijenaUsluge));
-                   }
-               }   
-        }
-        public void PromijeniNazivUsluge(string noviNazivUsluge, double cijenaUsluge)
+        public void PromijeniCijenu(CjenovnikItem Stavka, double Cijena)
         {
-            foreach (var Usluga in UslugeICijene)
-            {
-                if (Usluga.Item2==cijenaUsluge)
-                {
-                    UslugeICijene.Remove(Usluga);
-                    UslugeICijene.Add(new Tuple<string, double>(noviNazivUsluge, cijenaUsluge));
-                }
-            }
+            CjenovnikLista.Find(x => x.Id == Stavka.Id).Cijena = Cijena;
+        }
+        public void PromijeniNazivUsluge(CjenovnikItem Stavka, string NoviNazivUsluge)
+        {
+            CjenovnikLista.Find(x => x.Id == Stavka.Id).Naziv = NoviNazivUsluge;
         }
         #endregion
     }
