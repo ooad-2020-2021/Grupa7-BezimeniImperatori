@@ -32,7 +32,7 @@ namespace JAWS.Models
         [Required]
         [EnumDataType(typeof(Spol))]
         [DisplayName("Spol: ")]
-        public char Spol { get; set; }
+        public Spol Spol { get; set; }
 
         [Required]
         [DisplayName("Prebivalište: ")]
@@ -54,7 +54,7 @@ namespace JAWS.Models
         {
 
         }
-        public Pacijent(int Id, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, char spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene) : base(Id, imePrezime, email, sifra)
+        public Pacijent(int Id, string imePrezime, string email, string sifra, DateTime datumRodjenja, string brojTelefona, Spol spol, string prebivaliste, string jedinstveniMatičniBroj, string zdravstveneNapomene) : base(Id, imePrezime, email, sifra)
         {
             this.DatumRodjenja = datumRodjenja;
             this.BrojTelefona = brojTelefona;

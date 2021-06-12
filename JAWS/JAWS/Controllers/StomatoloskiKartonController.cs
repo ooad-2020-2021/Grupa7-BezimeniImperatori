@@ -25,6 +25,7 @@ namespace JAWS.Controllers
             return View(await _context.StomatoloskiKarton.ToListAsync());
         }
 
+
         // GET: StomatoloskiKarton/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -44,9 +45,18 @@ namespace JAWS.Controllers
         }
 
         // GET: StomatoloskiKarton/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int? id)
         {
-            return View();
+            if(id == null || id < 0)
+            {
+                return NotFound();
+            }
+            StomatoloskiKarton stKarton = new StomatoloskiKarton();
+            stKarton.PacijentId = Convert.ToInt32(id);
+
+            //List<StomatoloskiKarton> kartoni = await _context.StomatoloskiKarton.ToListAsync();
+
+            return View(stKarton);
         }
 
         // POST: StomatoloskiKarton/Create
@@ -54,7 +64,7 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PacijentId,DatumOtvaranjaKartona,PosjedovanjeLoyalKartice")] StomatoloskiKarton stomatoloskiKarton)
+        public async Task<IActionResult> Create([Bind("PacijentId,DatumOtvaranjaKartona,PosjedovanjeLoyalKartice")] StomatoloskiKarton stomatoloskiKarton)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +83,7 @@ namespace JAWS.Controllers
                 return NotFound();
             }
 
-            var stomatoloskiKarton = await _context.StomatoloskiKarton.FindAsync(id);
+            var stomatoloskiKarton = await _context.StomatoloskiKarton.FirstAsync(m => m.PacijentId == id);
             if (stomatoloskiKarton == null)
             {
                 return NotFound();
@@ -86,13 +96,9 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PacijentId,DatumOtvaranjaKartona,PosjedovanjeLoyalKartice")] StomatoloskiKarton stomatoloskiKarton)
+        public async Task<IActionResult> Edit(StomatoloskiKarton stomatoloskiKarton)
         {
-            if (id != stomatoloskiKarton.Id)
-            {
-                return NotFound();
-            }
-
+         
             if (ModelState.IsValid)
             {
                 try
@@ -148,6 +154,22 @@ namespace JAWS.Controllers
         private bool StomatoloskiKartonExists(int id)
         {
             return _context.StomatoloskiKarton.Any(e => e.Id == id);
+        }
+
+        public async Task<IActionResult> ProvjeriKarton(int? id) {
+            if (id == null || id < 0) {
+                throw new Exception();
+            }
+
+            StomatoloskiKarton stKarton = await _context.StomatoloskiKarton.FirstAsync(m => m.PacijentId == id);
+            if (stKarton == null)
+            {
+                return RedirectToAction("Create", new { id = id });
+            }
+            else {
+                return RedirectToAction("Edit", new { id = id });
+            }
+            
         }
     }
 }

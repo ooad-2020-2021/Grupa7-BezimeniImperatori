@@ -314,7 +314,6 @@ C:\Users\pc\source\repos\JAWS\JAWS\JAWS\bin\Debug\netcoreapp3.1\runtimes\win-x86
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.csproj.AssemblyReference.cache
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.AssemblyInfoInputs.cache
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.AssemblyInfo.cs
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.csproj.CoreCompileInputs.cache
@@ -394,3 +393,4 @@ C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\View
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Delete.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Edit.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Index.cshtml.g.cs
+C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.csproj.AssemblyReference.cache

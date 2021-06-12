@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Pacijenti</h1>
 
 <p>
     <a asp-action="Create">Dodaj pacijenta</a>
@@ -19,31 +19,11 @@
                 @Html.DisplayNameFor(model => model.DatumRodjenja)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Spol)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.BrojTelefona)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email) @*Da li treba sakriti i email*@
+                @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th type="hidden" asp-for="Sifra">
-                @*Ne znamo sakriti sifru*@
-                @Html.DisplayNameFor(model => model.Sifra)
-            </th>
-            <th></th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.Prebivaliste)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.JedinstveniMatičniBroj)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ZdravstveneNapomene)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LoyalKarticaId)
-        </th>*@
         </tr>
     </thead>
     <tbody>
@@ -53,10 +33,8 @@
                 @Html.DisplayFor(modelItem => item.ImePrezime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DatumRodjenja)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Spol)
+               @* @Html.DisplayFor(modelItem => item.DatumRodjenja)*@
+                @item.DatumRodjenja
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BrojTelefona)
@@ -64,22 +42,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td type="hidden" asp-for="Sifra">
-                @Html.DisplayFor(modelItem => item.Sifra) @*Isto kao gore*@
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Prebivaliste)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.JedinstveniMatičniBroj)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ZdravstveneNapomene)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoyalKarticaId)
-        </td>*@
             <td>
+                <a asp-controller="StomatoloskiKarton" asp-action="ProvjeriKarton" asp-route-id="@item.Id">Dodaj/uredi karton</a> |
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>

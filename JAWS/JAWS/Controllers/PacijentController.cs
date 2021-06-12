@@ -22,13 +22,12 @@ namespace JAWS.Controllers
         // GET: Pacijent
         public async Task<IActionResult> Index()
         {
-            //gdje napraviti listu pacijenata
-            /*Pacijent Pac = Cjenovnik.DajCjenovnik();
-            cj.CjenovnikLista.Clear();
-            cj.CjenovnikLista.AddRange((IEnumerable<CjenovnikItem>)await _context.CjenovnikItem.ToListAsync());
-            return View(cj);*/
 
-            return View(await _context.Pacijent.ToListAsync());
+            
+            List<Pacijent> pacijenti = await _context.Pacijent.ToListAsync();
+            
+
+            return View(pacijenti);
         }
 
         // GET: Pacijent/Details/5
@@ -54,35 +53,6 @@ namespace JAWS.Controllers
         {
             return View();
         }
-        /*private readonly JAWSContext _context;
-
-
-        public CjenovnikController(JAWSContext context)
-        {
-            _context = context;
-        }
-
-        // GET: Cjenovnik
-        public async Task<IActionResult> Index()
-        {
-            Cjenovnik cj = Cjenovnik.DajCjenovnik();
-            cj.CjenovnikLista.Clear();
-            cj.CjenovnikLista.AddRange((IEnumerable<CjenovnikItem>)await _context.CjenovnikItem.ToListAsync());
-
-            return View(cj);
-        }
-      
-
-        // GET: Cjenovnik/Create
-        public IActionResult Create()
-        {
-            CjenovnikItem cjItem = new CjenovnikItem();
-
-            cjItem.CjenovnikId = Cjenovnik.DajCjenovnik().Id;
-            if (  cjItem.CjenovnikId < 1 ){ cjItem.CjenovnikId = 1; }
-            return View();
-        }
-*/
 
         // POST: Pacijent/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
