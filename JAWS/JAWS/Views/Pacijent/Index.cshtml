@@ -7,77 +7,78 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Dodaj pacijenta</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DatumRodjenja)
+                @Html.DisplayNameFor(model => model.ImePrezime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BrojTelefona)
+                @Html.DisplayNameFor(model => model.DatumRodjenja)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Spol)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Prebivaliste)
+                @Html.DisplayNameFor(model => model.BrojTelefona)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.JedinstveniMatičniBroj)
+                @Html.DisplayNameFor(model => model.Email) @*Da li treba sakriti i email*@
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ZdravstveneNapomene)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LoyalKarticaId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImePrezime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
+            <th type="hidden" asp-for="Sifra">
+                @*Ne znamo sakriti sifru*@
                 @Html.DisplayNameFor(model => model.Sifra)
             </th>
             <th></th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Prebivaliste)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JedinstveniMatičniBroj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdravstveneNapomene)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoyalKarticaId)
+        </th>*@
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.DatumRodjenja)
+                @Html.DisplayFor(modelItem => item.ImePrezime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BrojTelefona)
+                @Html.DisplayFor(modelItem => item.DatumRodjenja)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Spol)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Prebivaliste)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JedinstveniMatičniBroj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ZdravstveneNapomene)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoyalKarticaId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImePrezime)
+                @Html.DisplayFor(modelItem => item.BrojTelefona)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sifra)
+            <td type="hidden" asp-for="Sifra">
+                @Html.DisplayFor(modelItem => item.Sifra) @*Isto kao gore*@
             </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Prebivaliste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JedinstveniMatičniBroj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdravstveneNapomene)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoyalKarticaId)
+        </td>*@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
