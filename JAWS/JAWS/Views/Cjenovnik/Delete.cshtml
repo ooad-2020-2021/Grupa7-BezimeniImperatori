@@ -1,21 +1,19 @@
-﻿@model JAWS.Models.Cjenovnik
+﻿@model JAWS.Models.CjenovnikItem
 
-@{
-    ViewData["Title"] = "Delete";
-}
 
-<h1>Delete</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h2>Da li želite izbrisati ovu uslugu?</h2>
 <div>
-    <h4>Cjenovnik</h4>
     <hr />
     <dl class="row">
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <label asp-for="Naziv" class="control-label"></label>
+        <input asp-for="Naziv" class="form-control" />
+        <input type="submit" value="Izbriši" class="btn btn-danger" /> |
+        <a asp-action="Index">Nazad na cjenovnik</a>
+
     </form>
 </div>

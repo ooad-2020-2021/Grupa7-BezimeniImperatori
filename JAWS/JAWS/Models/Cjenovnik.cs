@@ -24,7 +24,7 @@ namespace JAWS.Models
         public int Id { get; set; }
 
         [NotMapped]
-        public static List<CjenovnikItem> CjenovnikLista { get; set; } = new List<CjenovnikItem>();
+        public List<CjenovnikItem> CjenovnikLista { get; set; } = new List<CjenovnikItem>();
 
         #endregion
 

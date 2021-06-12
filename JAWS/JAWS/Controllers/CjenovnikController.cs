@@ -14,6 +14,7 @@ namespace JAWS.Controllers
     {
         private readonly JAWSContext _context;
 
+
         public CjenovnikController(JAWSContext context)
         {
             _context = context;
@@ -22,30 +23,21 @@ namespace JAWS.Controllers
         // GET: Cjenovnik
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cjenovnik.ToListAsync());
+            Cjenovnik cj = Cjenovnik.DajCjenovnik();
+            cj.CjenovnikLista.Clear();
+            cj.CjenovnikLista.AddRange((IEnumerable<CjenovnikItem>)await _context.CjenovnikItem.ToListAsync());
+
+            return View(cj);
         }
-
-        // GET: Cjenovnik/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cjenovnik = await _context.Cjenovnik
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (cjenovnik == null)
-            {
-                return NotFound();
-            }
-
-            return View(cjenovnik);
-        }
+      
 
         // GET: Cjenovnik/Create
         public IActionResult Create()
         {
+            CjenovnikItem cjItem = new CjenovnikItem();
+
+            cjItem.CjenovnikId = Cjenovnik.DajCjenovnik().Id;
+            if (  cjItem.CjenovnikId < 1 ){ cjItem.CjenovnikId = 1; }
             return View();
         }
 
@@ -54,15 +46,15 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] Cjenovnik cjenovnik)
+        public async Task<IActionResult> Create(CjenovnikItem cjItem)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cjenovnik);
+                _context.Add(cjItem);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(cjenovnik);
+            return View(cjItem);
         }
 
         // GET: Cjenovnik/Edit/5
@@ -73,12 +65,12 @@ namespace JAWS.Controllers
                 return NotFound();
             }
 
-            var cjenovnik = await _context.Cjenovnik.FindAsync(id);
-            if (cjenovnik == null)
+            var cjenovnikItem = await _context.CjenovnikItem.FindAsync(id);
+            if (cjenovnikItem == null)
             {
                 return NotFound();
             }
-            return View(cjenovnik);
+            return View(cjenovnikItem);
         }
 
         // POST: Cjenovnik/Edit/5
@@ -86,23 +78,19 @@ namespace JAWS.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] Cjenovnik cjenovnik)
+        public async Task<IActionResult> Edit(CjenovnikItem cjenovnikItem)
         {
-            if (id != cjenovnik.Id)
-            {
-                return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(cjenovnik);
+                    _context.Update(cjenovnikItem);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CjenovnikExists(cjenovnik.Id))
+                    if (!CjenovnikExists(cjenovnikItem.Id))
                     {
                         return NotFound();
                     }
@@ -113,7 +101,7 @@ namespace JAWS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(cjenovnik);
+            return View(cjenovnikItem);
         }
 
         // GET: Cjenovnik/Delete/5
@@ -123,24 +111,23 @@ namespace JAWS.Controllers
             {
                 return NotFound();
             }
-
-            var cjenovnik = await _context.Cjenovnik
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (cjenovnik == null)
+            CjenovnikItem cj = new CjenovnikItem();
+            cj = await _context.CjenovnikItem.FirstAsync(x =>  x.Id == id);
+            
+            if (cj == null)
             {
                 return NotFound();
             }
 
-            return View(cjenovnik);
+            return View(cj);
         }
 
         // POST: Cjenovnik/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(CjenovnikItem cj)
         {
-            var cjenovnik = await _context.Cjenovnik.FindAsync(id);
-            _context.Cjenovnik.Remove(cjenovnik);
+            _context.CjenovnikItem.Remove(cj);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

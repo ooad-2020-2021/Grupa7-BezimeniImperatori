@@ -329,7 +329,6 @@ C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.TagHelpers.
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.RazorCoreGenerate.cache
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Create.cshtml.g.cs
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Delete.cshtml.g.cs
-C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Details.cshtml.g.cs
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Edit.cshtml.g.cs
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\Index.cshtml.g.cs
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Doktor\Create.cshtml.g.cs
@@ -391,5 +390,3 @@ C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.csproj.Copy
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.dll
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.pdb
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.genruntimeconfig.cache
-C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\DoktorHome.cshtml.g.cs
-C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\PacijentHome.cshtml.g.cs
