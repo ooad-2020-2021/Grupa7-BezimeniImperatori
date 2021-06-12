@@ -1,47 +1,50 @@
-﻿@model IEnumerable<JAWS.Models.Doktor>
-
+﻿
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@* Doktor home page *@
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ImePrezime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sifra)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImePrezime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sifra)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container">
+    <div class="block text-center">
+        <h1 class="text-center">Dobro došli u JAWS</h1>
+    </div>
+    <div class="row">
+        <a asp-controller="Termin" asp-action="Index">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Raspored</h2>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Kartoni</h2>
+                </div>
+            </div>
+        </a>
+        <a href="/StomatoloskaUsluga">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Usluga</h2>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Cjenovnik</h2>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Knjiga protokola</h2>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>

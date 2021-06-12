@@ -20,9 +20,9 @@ namespace JAWS.Controllers
         }
 
         // GET: Doktor
-        public async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
-            return View(await _context.Doktor.ToListAsync());
+            return View();
         }
 
         // GET: Doktor/Details/5
@@ -148,6 +148,11 @@ namespace JAWS.Controllers
         private bool DoktorExists(int id)
         {
             return _context.Doktor.Any(e => e.Id == id);
+        }
+
+        public IActionResult DoktorHome()
+        {
+            return View();
         }
     }
 }
