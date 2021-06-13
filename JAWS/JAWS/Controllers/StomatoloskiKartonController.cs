@@ -82,14 +82,29 @@ namespace JAWS.Controllers
             {
                 return NotFound();
             }
-
-            var stomatoloskiKarton = await _context.StomatoloskiKarton.FirstAsync(m => m.PacijentId == id);
+            var stomatoloskiKarton = await _context.StomatoloskiKarton.FirstOrDefaultAsync(m => m.Id == id);
             if (stomatoloskiKarton == null)
             {
                 return NotFound();
             }
             return View(stomatoloskiKarton);
         }
+
+        public async Task<IActionResult> EditForPacijent(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var stomatoloskiKarton = await _context.StomatoloskiKarton.FirstOrDefaultAsync(m => m.PacijentId == id);
+            if (stomatoloskiKarton == null)
+            {
+                return NotFound();
+            }
+            return View(stomatoloskiKarton);
+        }
+
+
 
         // POST: StomatoloskiKarton/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
@@ -99,6 +114,37 @@ namespace JAWS.Controllers
         public async Task<IActionResult> Edit(StomatoloskiKarton stomatoloskiKarton)
         {
          
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(stomatoloskiKarton);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!StomatoloskiKartonExists(stomatoloskiKarton.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(stomatoloskiKarton);
+        }
+
+        // POST: StomatoloskiKarton/EditForPacijent/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditForPacijent(StomatoloskiKarton stomatoloskiKarton)
+        {
+
             if (ModelState.IsValid)
             {
                 try
@@ -161,13 +207,13 @@ namespace JAWS.Controllers
                 throw new Exception();
             }
 
-            StomatoloskiKarton stKarton = await _context.StomatoloskiKarton.FirstAsync(m => m.PacijentId == id);
+            StomatoloskiKarton stKarton = await _context.StomatoloskiKarton.FirstOrDefaultAsync(m => m.PacijentId == id);
             if (stKarton == null)
             {
                 return RedirectToAction("Create", new { id = id });
             }
             else {
-                return RedirectToAction("Edit", new { id = id });
+                return RedirectToAction("EditForPacijent", new { id = id });
             }
             
         }
