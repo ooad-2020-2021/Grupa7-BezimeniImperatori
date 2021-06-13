@@ -404,3 +404,5 @@ C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Term
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.csproj.AssemblyReference.cache
 C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\StomatoloskiKarton\EditForPacijent.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\StomatoloskiKarton\EditForPacijent.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Termin\CreatePacijent.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Termin\IndexPacijent.cshtml.g.cs

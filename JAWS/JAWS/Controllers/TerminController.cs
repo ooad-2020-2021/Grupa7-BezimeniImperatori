@@ -65,9 +65,6 @@ namespace JAWS.Controllers
             }
             return View(termin);
         }
-        //Post za pacijenta
-     
-
         [HttpGet]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> TerminPacijent([Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)

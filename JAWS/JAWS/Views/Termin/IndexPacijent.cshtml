@@ -1,0 +1,42 @@
+﻿@model IEnumerable<JAWS.Models.Termin>
+@{
+    ViewData["Title"] = "IndexPacijent";
+}
+
+<h1>Termini</h1>
+
+<p>
+    <a asp-action="Create">Zakaži termin</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VrijemeTermina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZauzetostTermina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObrazlozenjeTermina)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.VrijemeTermina
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ZauzetostTermina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ObrazlozenjeTermina)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
