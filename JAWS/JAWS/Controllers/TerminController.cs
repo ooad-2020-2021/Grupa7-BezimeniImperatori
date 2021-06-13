@@ -64,6 +64,26 @@ namespace JAWS.Controllers
             }
             return View(termin);
         }
+        //Post za pacijenta
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> TerminPacijent([Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)
+        {
+            if (ModelState.IsValid)
+            {
+                var data = await _context.Termin.ToListAsync();
+                foreach (var item in data)
+                {
+                    TimeSpan ts = termin.VrijemeTermina - item.VrijemeTermina;
+                    if (ts.TotalMinutes < 0) ts = -ts;
+                    //if (ts.TotalMinutes > 60);
+                }
+                _context.Add(termin);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(termin);
+        }
 
         // GET: Termin/Edit/5
         public async Task<IActionResult> Edit(int? id)

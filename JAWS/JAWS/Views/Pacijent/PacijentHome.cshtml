@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Pacijent početna";
+}
+
+@* Pacijent home page *@
+
+<div class="container mx-auto">
+    <div class="block text-center">
+        <h1 class="text-center">Dobro došli u JAWS</h1>
+    </div>
+    <div class="row">
+        <a class="btn btn-primary btn-lg mr-5" asp-controller="Termin" asp-action="TerminPacijent">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-black-50">Zakaži termin</h2>
+                </div>
+            </div>
+        </a>
+        <a class="btn btn-primary btn-lg mr-5" asp-controller="Cjenovnik" asp-action="CjenovnikPacijent">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-black-50">Cjenovnik usluga</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

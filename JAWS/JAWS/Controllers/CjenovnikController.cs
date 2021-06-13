@@ -29,7 +29,15 @@ namespace JAWS.Controllers
 
             return View(cj);
         }
-      
+        //GET: Cjenovnik za pacijenta
+        public async Task<IActionResult> CjenovnikPacijent()
+        {
+            Cjenovnik cj = Cjenovnik.DajCjenovnik();
+            cj.CjenovnikLista.Clear();
+            cj.CjenovnikLista.AddRange((IEnumerable<CjenovnikItem>)await _context.CjenovnikItem.ToListAsync());
+            return View(cj);
+        }
+
 
         // GET: Cjenovnik/Create
         public IActionResult Create()

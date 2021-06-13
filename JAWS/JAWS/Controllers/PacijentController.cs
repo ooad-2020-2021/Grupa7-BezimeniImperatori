@@ -29,6 +29,10 @@ namespace JAWS.Controllers
 
             return View(pacijenti);
         }
+        public IActionResult PacijentHome()
+        {
+            return View();
+        }
 
         // GET: Pacijent/Details/5
         public async Task<IActionResult> Details(int? id)

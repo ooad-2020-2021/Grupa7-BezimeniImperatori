@@ -1,0 +1,29 @@
+﻿@model JAWS.Models.Cjenovnik
+
+@{
+    ViewData["Title"] = "Cjenovnik";
+}
+
+<h1>Cjenovnik</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CjenovnikLista.First().Naziv) </th>
+            <th>@Html.DisplayNameFor(model => model.CjenovnikLista.First().Cijena) </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CjenovnikLista)
+        {
+            <tr>
+                <td>
+                    @item.Naziv
+                </td>
+                <td>
+                    @item.Cijena
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
