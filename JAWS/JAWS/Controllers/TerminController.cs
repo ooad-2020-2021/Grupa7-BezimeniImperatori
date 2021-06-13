@@ -56,6 +56,7 @@ namespace JAWS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)
         {
+
             if (ModelState.IsValid)
             {
                 _context.Add(termin);
@@ -66,8 +67,9 @@ namespace JAWS.Controllers
         }
         //Post za pacijenta
      
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+
+        [HttpGet]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> TerminPacijent([Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)
         {
             if (ModelState.IsValid)
