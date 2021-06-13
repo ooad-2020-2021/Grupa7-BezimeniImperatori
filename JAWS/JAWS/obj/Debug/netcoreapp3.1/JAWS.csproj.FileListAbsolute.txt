@@ -397,3 +397,4 @@ C:\Users\pc\source\repos\JAWS\JAWS\JAWS\obj\Debug\netcoreapp3.1\JAWS.csproj.Asse
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Pacijent\PacijentHome.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Cjenovnik\CjenovnikPacijent.cshtml.g.cs
 C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Termin\TerminPacijent.cshtml.g.cs
+C:\Users\User\source\repos\Projekat\JAWS\JAWS\obj\Debug\netcoreapp3.1\Razor\Views\Termin\TerminPacijentGreska.cshtml.g.cs

@@ -1,0 +1,22 @@
+﻿@model JAWS.Models.Termin
+
+@{
+    ViewData["Title"] = "TerminPacijentGreska";
+}
+
+@* Termin error page *@
+
+<div class="container mx-auto">
+    <div class="block text-center">
+        <h1 class="text-center">Nažalost, izabrali ste zauzet termin</h1>
+    </div>
+    <div class="row">
+        <a class="btn btn-primary btn-lg mr-5" asp-controller="Termin" asp-action="TerminPacijent">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-black-50">Zakaži termin ponovo</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

@@ -65,6 +65,7 @@ namespace JAWS.Controllers
             return View(termin);
         }
         //Post za pacijenta
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> TerminPacijent([Bind("TerminId,PacijentId,VrijemeTermina,ZauzetostTermina,ObrazlozenjeTermina")] Termin termin)
@@ -74,15 +75,22 @@ namespace JAWS.Controllers
                 var data = await _context.Termin.ToListAsync();
                 foreach (var item in data)
                 {
+                    //if (!item.ZauzetostTermina) break; da li je potrebno
                     TimeSpan ts = termin.VrijemeTermina - item.VrijemeTermina;
                     if (ts.TotalMinutes < 0) ts = -ts;
-                    //if (ts.TotalMinutes > 60);
+                    if (ts.TotalMinutes < 60) return RedirectToAction(nameof(TerminPacijentGreska)); //Zauzet je, redirect na greska view
                 }
+                termin.ZauzetostTermina = true;
                 _context.Add(termin);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(termin);
+        }
+        //Get view Error - Pacijent
+        public IActionResult TerminPacijentGreska()
+        {
+            return View();
         }
 
         // GET: Termin/Edit/5
